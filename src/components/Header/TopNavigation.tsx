@@ -4,10 +4,10 @@ function TopNavigation() {
   return (
     <nav>
       <ul>
-        <li>About Me</li>
+        <li>Home</li>
         <li>Work</li>
         <li>Projects</li>
-        <li>Life</li>
+        <li>About Me</li>
       </ul>
     </nav>
   )

@@ -11,6 +11,7 @@ function TopNavigation() {
       bg: "gray.100", // Example: Change background color on hover
       color: "black"
     },
+    fontSize: { base: "xs", md: "lg" },
   }
 
   return (
@@ -23,12 +24,14 @@ function TopNavigation() {
       zIndex="sticky"
       justify="center"
       // bg="rgba(255, 255, 255, 0.8)" // Glassy background with transparency
-      bg={colorMode === "dark" ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.8)"} // Adjust background based on color mode
-      py="1em" // Vertical padding
-      px="3em"
-      boxShadow={colorMode === "dark" ? "2px 2px 5px rgba(100, 90, 100, 0.7)" : "2px 2px 5px rgba(0, 0, 0, 0.1)"} // Optional shadow
+      bg={colorMode === "dark" ? "#2D3748" : "rgba(255, 255, 255, 0.8)"} // Adjust background based on color mode
+      py={{ base: "0.5em", md: "1em" }} // Responsive vertical padding
+      px={{ base: "0em", md: "3em" }} // Responsive horizontal padding
+      boxShadow={colorMode === "dark" ? "2px 2px 2px rgba(100, 100, 100, 1)" : "2px 2px 5px rgba(0, 0, 0, 0.1)"} // Optional shadow
       borderRadius="4em"
-      gap="1em"
+      gap={{ base: "0em", md: "1em" }}
+      maxW="screen-xl" // Limit maximum width
+      minW="20rem" 
     >
       <Button {...buttonStyles}>Home</Button>
       <Button {...buttonStyles}>Work</Button>

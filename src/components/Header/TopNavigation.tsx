@@ -1,6 +1,6 @@
 
 import { Flex, Button, useColorMode } from "@chakra-ui/react";
-
+import "../../styles/components/TopNavigation.css"
 function TopNavigation() {
   const { colorMode } = useColorMode();
   const buttonStyles = {
@@ -17,13 +17,15 @@ function TopNavigation() {
   return (
     <Flex
       as="nav"
+      // className="top-nav"
       position="fixed"
       top="1em"
       left="50%"
       transform="translateX(-50%)" // Adjust for centering
       zIndex="sticky"
       justify="center"
-      // bg="rgba(255, 255, 255, 0.8)" // Glassy background with transparency
+      backdropFilter="blur(20px)" // Blur effect
+      // bg="rgba(100, 100, 100, 0.8)" // Glassy background with transparency
       bg={colorMode === "dark" ? "#2D3748" : "rgba(255, 255, 255, 0.8)"} // Adjust background based on color mode
       py={{ base: "0.5em", md: "1em" }} // Responsive vertical padding
       px={{ base: "0em", md: "3em" }} // Responsive horizontal padding

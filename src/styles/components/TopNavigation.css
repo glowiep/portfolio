@@ -1,0 +1,11 @@
+.top-nav {
+  background-color: #3a4455; 
+  backdrop-filter: blur(20px); 
+  padding: 0.5em; 
+  border-radius: 5em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  border: #5c6574 1px solid;
+
+  position: fixed;
+  margin-top: 2em;
+}

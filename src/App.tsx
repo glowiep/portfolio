@@ -1,13 +1,28 @@
-import Home from './components/Pages/Home'
-import './styles/App.css'
+import Home from "./components/Pages/Home";
+import TopNavigation from "./components/Header/TopNavigation";
+import "./styles/App.css";
 
-function App() {
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AboutMe from "./components/Pages/AboutMe";
 
-  return (
-    <>
-      <Home />
-    </>
-  )
+const AppRoutes = () => {
+ return (
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/AboutMe" element={<AboutMe /> } />
+    <Route path="/" element={<Home />} />
+    {/* Add more routes here */}
+  </Routes>
+ )
 }
 
-export default App
+function App() {
+  return (
+    <BrowserRouter>
+      <TopNavigation />
+      <AppRoutes />
+    </BrowserRouter>
+  );
+}
+
+export default App;

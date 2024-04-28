@@ -1,7 +1,9 @@
 
 import { Flex, Button } from "@chakra-ui/react";
 import { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import "../../styles/components/TopNavigation.css"
+
 function TopNavigation() {
   const [showNavBg, setShowNavBg] = useState(false);
 
@@ -56,10 +58,16 @@ function TopNavigation() {
         maxW="screen-xl" // Limit maximum width
         minW="20rem" 
       >
-        <Button {...buttonStyles}>Home</Button>
-        <Button {...buttonStyles}>Work</Button>
+        <Button {...buttonStyles}>
+          <Link to="/">Home</Link>
+        </Button>
         <Button {...buttonStyles}>Projects</Button>
-        <Button {...buttonStyles}>About Me</Button>
+        <Button {...buttonStyles}>Work</Button>
+        <Button {...buttonStyles}>
+          <Link to="/AboutMe" >
+            About Me
+          </Link>
+        </Button>
         </Flex>
       </section>
   )

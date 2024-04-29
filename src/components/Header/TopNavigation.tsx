@@ -2,7 +2,10 @@
 import { Flex, Button } from "@chakra-ui/react";
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import "../../styles/components/TopNavigation.css"
+
+const MotionButton = motion(Button)
 
 function TopNavigation() {
   const [showNavBg, setShowNavBg] = useState(false);
@@ -24,6 +27,9 @@ function TopNavigation() {
   }, []);
 
   const buttonStyles = {
+    whileTap: { scale: 0.5, boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)' },
+    whileHover: { scale: 1.1 },
+    // transition: { type: "spring", stiffness: 400, damping: 17 },
     variant: "ghost",
     borderRadius: "4em",
     px: { base: "1em", md: "2em" },
@@ -58,18 +64,12 @@ function TopNavigation() {
         maxW="screen-xl" // Limit maximum width
         minW="20rem" 
       >
-        <Button {...buttonStyles}>
-          <Link to="/">Home</Link>
-        </Button>
-        <Button {...buttonStyles}>Projects</Button>
-        <Button {...buttonStyles}>Work</Button>
-        <Button {...buttonStyles}>
-          <Link to="/AboutMe" >
-            About Me
-          </Link>
-        </Button>
-        </Flex>
-      </section>
+        <Link to="/"><MotionButton {...buttonStyles}>Home</MotionButton></Link>
+        <Link to="/"><MotionButton {...buttonStyles}>Projects</MotionButton></Link>
+        <Link to="/"><MotionButton {...buttonStyles}>Work</MotionButton></Link>
+        <Link to="/AboutMe"><MotionButton {...buttonStyles}>About Me</MotionButton></Link>
+      </Flex>
+    </section>
   )
 }
 

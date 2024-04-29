@@ -14,6 +14,17 @@ import type { StyleFunctionProps } from '@chakra-ui/styled-system'
 // export default theme;
 
 const theme = extendTheme({
+  styles: {
+    global: {
+      body: {
+        bg: '#0a1421',
+        color: 'white', // Set the text color to white for better contrast
+        display: 'flex',
+        flexDirection: 'column',
+        minHeight: '100vh',
+      },
+    },
+  },
   components: {
     Button: {
       // 1. We can update the base styles

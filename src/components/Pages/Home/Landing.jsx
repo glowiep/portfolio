@@ -116,7 +116,7 @@ function Landing() {
               textAlign: 'center',
             }}
           >
-            <a href="#projectList" className="scroll-link">
+            <a href="#project-list" className="scroll-link">
               <Button {...buttonStyles}>
                 View My Projects
               </Button>

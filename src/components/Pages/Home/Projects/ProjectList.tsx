@@ -1,7 +1,9 @@
+import Quote from "../Quote.jsx"
 
 function ProjectList() {
   return(
-    <section>
+    <section id="projectList">
+      <Quote />
     </section>
   )
 }

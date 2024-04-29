@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, useBreakpointValue, Button } from "@chakra-ui/react";
+import { Box, Text, Flex, useBreakpointValue, Button } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Typewriter from "./Typewriter";
 import "../../../styles/components/Home.css";
@@ -13,8 +13,6 @@ function Landing() {
 
   
   const buttonStyles = {
-    whileTap: { scale: 0.5, boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)' },
-    whileHover: { scale: 1.1 },
     background: "#5420A3",
     borderRadius: "4em",
     px: { base: "1em", md: "2em" },
@@ -64,7 +62,8 @@ function Landing() {
               // width: introWidth,
               paddingLeft: "15%",
               paddingRight: "15%",
-              textAlign: 'center',
+              textAlign: 'center',              
+              paddingTop: "1.25em",
             }}
           >
             I am a Web Developer passionate about creating experiences that are easy to use, accessible and fulfils the user's needs.
@@ -79,10 +78,15 @@ function Landing() {
               WebkitBackgroundClip: "text",
               fontSize: typewriterFontSize,
               textAlign: 'center',
-              paddingTop: "2em",
+              paddingTop: "2.25em",
             }}
           >
-            I strive to
+            <Box>
+              <Text as="div" fontStyle="italic">
+                I strive to
+              </Text>
+            </Box>
+
             <div
               id="typewriter"
               style={{
@@ -106,13 +110,17 @@ function Landing() {
               WebkitBackgroundClip: "text",
               color: "white",
               fontSize: typewriterFontSize,
-              paddingTop: "2.5em",
+              paddingTop: "2.25em",
               paddingLeft: "15%",
               paddingRight: "15%",
               textAlign: 'center',
             }}
           >
-            <Button {...buttonStyles}><a href="#projectList">View My Projects</a></Button>
+            <a href="#projectList" className="scroll-link">
+              <Button {...buttonStyles}>
+                View My Projects
+              </Button>
+            </a>
           </motion.h1>
         </Box>
       </Flex>

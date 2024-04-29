@@ -2,6 +2,7 @@
 
 import "../../../styles/components/Home.css";
 import Landing from "./Landing.jsx"
+import ProjectList from "./Projects/ProjectList.js";
 
 function Home() {
 
@@ -11,9 +12,7 @@ function Home() {
       <Landing />
     </section>
 
-    <section id="projectList">
-      <h1>Project list</h1>
-    </section>
+    <ProjectList />
     </>
   );
 }

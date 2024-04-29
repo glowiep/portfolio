@@ -13,7 +13,7 @@ function TopNavigation() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      if (scrollY > 10) {
+      if (scrollY > 80) {
         setShowNavBg(true);
       } else {
         setShowNavBg(false);
@@ -34,12 +34,11 @@ function TopNavigation() {
     borderRadius: "4em",
     px: { base: "1em", md: "2em" },
     gap: { base: "0.5em", md: "1em" },
-    // color: "blue.500", 
     _hover: {
-      bg: "gray.100", // Example: Change background color on hover
+      bg: "gray.100", 
       color: "black"
     },
-    fontSize: { base: "xs", md: "lg" },
+    fontSize: { base: "sm", md: "lg" },
   }
 
   return (
@@ -47,13 +46,12 @@ function TopNavigation() {
       <Flex
         as="nav"
         position="fixed"
-        top="1em"
+        top="2.5em"
         left="50%"
         transform="translateX(-50%)" // Adjust for centering
         zIndex="sticky"
         justify="center"
         backdropFilter="blur(7px)" // Blur effect
-        // bg="rgba(100, 100, 100, 0.8)" // Glassy background with transparency
         bg={showNavBg === true && "rgba(120, 120, 120, 0.1)"} // Adjust background based on color mode
         py={{ base: "0.5em", md: "1em" }} // Responsive vertical padding
         px={{ base: "0em", md: "3em" }} // Responsive horizontal padding

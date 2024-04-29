@@ -57,9 +57,9 @@ button:hover {
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 } */
-a {
+.scroll-link {
   scroll-behavior: smooth;
-  transition-duration: 0.8s;
+  transition-duration: 1s; /* Adjust this value for the desired scroll speed */
 }
 
 @media (prefers-color-scheme: light) {

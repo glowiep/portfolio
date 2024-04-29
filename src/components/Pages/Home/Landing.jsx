@@ -112,7 +112,7 @@ function Landing() {
               textAlign: 'center',
             }}
           >
-            <Button {...buttonStyles}>View My Projects</Button>
+            <Button {...buttonStyles}><a href="#projectList">View My Projects</a></Button>
           </motion.h1>
         </Box>
       </Flex>

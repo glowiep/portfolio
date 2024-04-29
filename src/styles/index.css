@@ -57,6 +57,10 @@ button:hover {
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 } */
+a {
+  scroll-behavior: smooth;
+  transition-duration: 0.8s;
+}
 
 @media (prefers-color-scheme: light) {
   :root {

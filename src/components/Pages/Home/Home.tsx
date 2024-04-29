@@ -11,7 +11,7 @@ function Home() {
       <Landing />
     </section>
 
-    <section id="projects">
+    <section id="projectList">
       <h1>Project list</h1>
     </section>
     </>

@@ -13,6 +13,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+  transition-duration: 1s;
+}
+
 /* a {
   font-weight: 500;
   color: #646cff;
@@ -57,10 +62,6 @@ button:hover {
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 } */
-.scroll-link {
-  scroll-behavior: smooth;
-  transition-duration: 1s; /* Adjust this value for the desired scroll speed */
-}
 
 @media (prefers-color-scheme: light) {
   :root {

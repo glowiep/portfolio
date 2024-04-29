@@ -26,9 +26,9 @@ function Landing() {
   return (
     <section>
       <Flex
-        direction="column" // Set flex direction to column
-        justifyContent="center" // Center content vertically
-        alignItems="center" // Center content horizontally
+        direction="column"
+        justifyContent="center"
+        alignItems="center"
         h="100vh" // Set height to full viewport height
       >
         <Box>
@@ -116,7 +116,7 @@ function Landing() {
               textAlign: 'center',
             }}
           >
-            <a href="#project-list" className="scroll-link">
+            <a href="#project-list">
               <Button {...buttonStyles}>
                 View My Projects
               </Button>

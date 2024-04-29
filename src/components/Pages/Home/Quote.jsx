@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Box, Flex, useBreakpointValue, Button } from "@chakra-ui/react";
+import { Center, useBreakpointValue, Button } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -11,12 +11,10 @@ function Quote() {
   });
   
   return (
-    <Flex
-      ref={ref}
-      direction="column"
-      justifyContent="center" 
-      alignItems="center" 
+    <Center
+      ref={ref}      
       padding="10%"
+      marginBottom="3em"
       bgGradient={[
         "linear(to-tr, teal.300, yellow.400)",
         // 'linear(to-t, blue.300, purple.600)',
@@ -37,7 +35,7 @@ function Quote() {
           -Edsger W. Dijkstra, "Notes On Structured Programming"
         </h2>
       </motion.div>
-    </Flex>
+    </Center>
   );
 }
 

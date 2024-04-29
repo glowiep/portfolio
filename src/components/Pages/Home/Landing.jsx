@@ -7,6 +7,7 @@ import "../../../styles/components/Home.css";
 function Landing() {
   const headingFontSize = useBreakpointValue({ base: "2.5em", md: "6em" });
   const typewriterFontSize = useBreakpointValue({ base: "1.5em", md: "2em" });
+  const introWidth = useBreakpointValue({ base: "100%", md: "50%" });
 
   return (
     <section>
@@ -29,9 +30,28 @@ function Landing() {
               fontSize: headingFontSize,
               fontWeight: "bold",
               paddingBottom: "0.3em",
+              textAlign: 'center',
             }}
           >
             Hello. I'm Gloria.
+          </motion.h1>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.25 }}
+            style={{
+              backgroundClip: "text",
+              WebkitBackgroundClip: "text",
+              color: "white",
+              fontSize: typewriterFontSize,
+              // width: introWidth,
+              paddingLeft: "15%",
+              paddingRight: "15%",
+              textAlign: 'center',
+            }}
+          >
+            I am a Web Developer passionate about creating experiences that are easy to use, accessible and fulfils the user's needs.
           </motion.h1>
 
           <motion.h1
@@ -42,6 +62,8 @@ function Landing() {
               backgroundClip: "text",
               WebkitBackgroundClip: "text",
               fontSize: typewriterFontSize,
+              textAlign: 'center',
+              paddingTop: "2em",
             }}
           >
             I strive to
@@ -52,7 +74,7 @@ function Landing() {
               }}
             >
               <Typewriter
-                phrases={["Create", "Learn", "Grow"]}
+                phrases={["Create", "Learn", "Grow", "Make Connections"]}
                 sleepTime={100}
               />
               <span id="cursor">|</span>

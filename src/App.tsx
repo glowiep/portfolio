@@ -1,4 +1,4 @@
-import Home from "./components/Pages/Home";
+import Home from "./components/Pages/Home/Home";
 import TopNavigation from "./components/Header/TopNavigation";
 import "./styles/App.css";
 

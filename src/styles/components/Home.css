@@ -1,0 +1,18 @@
+#typewriter {
+  font-weight: bold;
+}
+
+#cursor {
+  color: white;
+  animation: blink 1s steps(1) infinite;
+  font-weight: normal;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+}

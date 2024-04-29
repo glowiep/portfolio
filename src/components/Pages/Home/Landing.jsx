@@ -1,13 +1,29 @@
 import React from "react";
-import { Box, Flex, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Flex, useBreakpointValue, Button } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Typewriter from "./Typewriter";
 import "../../../styles/components/Home.css";
 
+
 function Landing() {
   const headingFontSize = useBreakpointValue({ base: "2.5em", md: "6em" });
   const typewriterFontSize = useBreakpointValue({ base: "1.5em", md: "2em" });
+  const introFontSize = useBreakpointValue({ base: "1.25em", md: "2em" });
   const introWidth = useBreakpointValue({ base: "100%", md: "50%" });
+
+  
+  const buttonStyles = {
+    whileTap: { scale: 0.5, boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)' },
+    whileHover: { scale: 1.1 },
+    background: "#5420A3",
+    borderRadius: "4em",
+    px: { base: "1em", md: "2em" },
+    gap: { base: "0.5em", md: "1em" },
+    _hover: {
+      bg: "#A57DF4",
+    },
+    fontSize: { base: "xs", md: "lg" },
+  }
 
   return (
     <section>
@@ -44,7 +60,7 @@ function Landing() {
               backgroundClip: "text",
               WebkitBackgroundClip: "text",
               color: "white",
-              fontSize: typewriterFontSize,
+              fontSize: introFontSize,
               // width: introWidth,
               paddingLeft: "15%",
               paddingRight: "15%",
@@ -79,6 +95,24 @@ function Landing() {
               />
               <span id="cursor">|</span>
             </div>
+          </motion.h1>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.75 }}
+            style={{
+              backgroundClip: "text",
+              WebkitBackgroundClip: "text",
+              color: "white",
+              fontSize: typewriterFontSize,
+              paddingTop: "2.5em",
+              paddingLeft: "15%",
+              paddingRight: "15%",
+              textAlign: 'center',
+            }}
+          >
+            <Button {...buttonStyles}>View My Projects</Button>
           </motion.h1>
         </Box>
       </Flex>

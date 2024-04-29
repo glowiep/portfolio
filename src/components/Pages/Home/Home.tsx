@@ -6,9 +6,15 @@ import Landing from "./Landing.jsx"
 function Home() {
 
   return (
-    <section>
+    <>
+    <section id="landing">
       <Landing />
     </section>
+
+    <section id="projects">
+      <h1>Project list</h1>
+    </section>
+    </>
   );
 }
 

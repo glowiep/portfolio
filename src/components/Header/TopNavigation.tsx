@@ -55,15 +55,15 @@ function TopNavigation() {
         bg={showNavBg === true && "rgba(120, 120, 120, 0.1)"} // Adjust background based on color mode
         py={{ base: "0.5em", md: "1em" }} // Responsive vertical padding
         px={{ base: "0em", md: "3em" }} // Responsive horizontal padding
-        boxShadow={showNavBg === true ? "2px 2px 2px rgba(100, 100, 100, 1)" : "2px 2px 2px rgba(100, 100, 100, 0)"} // Optional shadow
-        outline={showNavBg === true ? "solid rgba(92, 101, 116, 0.8)" : "2px 2px 2px rgba(100, 100, 100, 0)"} // Optional shadow
+        // boxShadow={showNavBg === true ? "2px 2px 2px rgba(100, 100, 100, 1)" : "2px 2px 2px rgba(100, 100, 100, 0)"} // Optional shadow
+        // outline={showNavBg === true ? "solid rgba(92, 101, 116, 0.8)" : "2px 2px 2px rgba(100, 100, 100, 0)"} // Optional shadow
         borderRadius="4em"
         gap={{ base: "0em", md: "1em" }}
         maxW="screen-xl" // Limit maximum width
         minW="20rem" 
       >
         <Link to="/"><MotionButton {...buttonStyles}>Home</MotionButton></Link>
-        <a href="#project-list"><MotionButton {...buttonStyles}>Projects</MotionButton></a>
+        <a href="/#project-list"><MotionButton {...buttonStyles}>Projects</MotionButton></a>
         {/* <Link to="/"><MotionButton {...buttonStyles}>Work</MotionButton></Link> */}
         <Link to="/AboutMe"><MotionButton {...buttonStyles}>About Me</MotionButton></Link>
       </Flex>

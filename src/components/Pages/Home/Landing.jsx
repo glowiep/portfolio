@@ -6,9 +6,9 @@ import "../../../styles/components/Home.css";
 
 
 function Landing() {
-  const headingFontSize = useBreakpointValue({ base: "2.5em", md: "6em" });
+  const headingFontSize = useBreakpointValue({ base: "1.5em", md: "4.75em" });
   const typewriterFontSize = useBreakpointValue({ base: "1.5em", md: "2em" });
-  const introFontSize = useBreakpointValue({ base: "1.25em", md: "2em" });
+  const introFontSize = useBreakpointValue({ base: "1.25em", md: "1.75em" });
   const introWidth = useBreakpointValue({ base: "100%", md: "50%" });
 
   
@@ -44,6 +44,7 @@ function Landing() {
               fontSize: headingFontSize,
               fontWeight: "bold",
               paddingBottom: "0.3em",
+              paddingTop:"0.75em",
               textAlign: 'center',
             }}
           >
@@ -66,7 +67,7 @@ function Landing() {
               paddingTop: "1.25em",
             }}
           >
-            I am a Web Developer passionate about creating experiences that are easy to use, accessible and fulfils the user's needs.
+            I craft digital experiences that are performant, accessible and fulfils the user's needs
           </motion.h1>
 
           <motion.h1
@@ -94,7 +95,7 @@ function Landing() {
               }}
             >
               <Typewriter
-                phrases={["Create", "Learn", "Grow", "Make Connections"]}
+                phrases={["Create", "Learn", "Grow", "Build Connections"]}
                 sleepTime={100}
               />
               <span id="cursor">|</span>

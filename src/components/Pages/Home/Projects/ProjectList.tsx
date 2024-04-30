@@ -1,13 +1,21 @@
 import Quote from "../Quote.jsx"
-import { Center } from '@chakra-ui/react'
+import { Flex, Text, Box } from '@chakra-ui/react'
 
 function ProjectList() {
   return(
     <section id="project-list">
       <Quote />
-      <Center>
-        <h1>My Projects</h1>
-      </Center>
+      <Flex
+        direction="column" // Set flex direction to column
+        justifyContent="center" // Center content vertically
+        alignItems="center" // Center content horizontally
+      >
+        <Box pt="60px">
+          <Text bg="white" bgClip="text" fontSize="6xl" fontWeight="extrabold">
+            My Projects
+          </Text>
+        </Box>
+      </Flex>
     </section>
   )
 }

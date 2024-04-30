@@ -6,7 +6,7 @@ import "../../../styles/components/Home.css";
 
 
 function Landing() {
-  const headingFontSize = useBreakpointValue({ base: "1.5em", md: "4.75em" });
+  const headingFontSize = useBreakpointValue({ base: "2.5em", md: "4.75em" });
   const typewriterFontSize = useBreakpointValue({ base: "1.5em", md: "2em" });
   const introFontSize = useBreakpointValue({ base: "1.25em", md: "1.75em" });
   const introWidth = useBreakpointValue({ base: "100%", md: "50%" });

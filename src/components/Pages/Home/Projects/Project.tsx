@@ -16,7 +16,7 @@ import { useInView } from "react-intersection-observer";
 import { MotionBox, MotionButton } from "../../../Motion";
 import { FaGithub } from "react-icons/fa";
 
-function Project({ name, description, imageURL, live, liveURL, githubURL, stack }) {
+function Project({ title, description, imageURL, live, liveURL, githubURL, stack }) {
   const { ref, inView } = useInView({
     triggerOnce: true, // Trigger animation only once
     threshold: 0.5, // Percentage of the element in view to trigger animation
@@ -62,8 +62,9 @@ function Project({ name, description, imageURL, live, liveURL, githubURL, stack 
               fontWeight="bold"
               textAlign="left"
               maxW={{ base: "100%", md: "480px" }}
+              marginBottom="0.5em"
             >
-              {name}
+              {title}
             </Heading>
             <Text
               fontSize="1.5rem"

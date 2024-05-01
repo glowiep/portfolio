@@ -28,7 +28,7 @@ function ProjectList() {
           return (
             <Project
               key={index}
-              name={project.name}
+              title={project.title}
               description={project.description}
               imageURL={project.imageURL}
               live={project.live}

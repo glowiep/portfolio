@@ -35,10 +35,6 @@ body {
   min-height: 100vh;
 }
 
-section {
-  margin: 1em;
-}
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;

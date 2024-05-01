@@ -1,5 +1,5 @@
 
-import { Flex, Button } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";

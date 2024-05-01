@@ -1,4 +1,5 @@
 import { Text, Box, Flex, Avatar } from "@chakra-ui/react";
+import { MotionBox } from "../Motion";
 
 function AboutMe() {
   return (
@@ -9,13 +10,19 @@ function AboutMe() {
         alignItems="center" // Center content horizontally
         h="100vh" // Set height to full viewport height
       >
-        <Avatar size='2xl' name='Gloria Lim' src='public/images/profile-pic-1.PNG' />
+        <MotionBox whileHover={{ scale: 1.2 }} rounded="full" shadow="lg">
+          <Avatar
+            size="2xl"
+            name="Gloria Lim"
+            src="public/images/profile-pic-1.PNG"
+            showBorder={true}
+          />
+        </MotionBox>
         <Box pt="60px">
           <Text bg="white" bgClip="text" fontSize="6xl" fontWeight="extrabold">
             About Me
           </Text>
         </Box>
-
       </Flex>
     </section>
   );

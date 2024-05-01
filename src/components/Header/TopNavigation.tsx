@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "../../styles/components/TopNavigation.css"
 
-const MotionButton = motion(Button)
+import { MotionButton } from "../Motion";
 
 function TopNavigation() {
   const [showNavBg, setShowNavBg] = useState(false);

@@ -31,7 +31,7 @@ function Quote() {
         transition={{ duration: 0.75 }}
       >
         <h1 style={{ fontWeight: "bold" }}>The art of programming is the art of organizing complexity.</h1>
-        <h2 style={{ fontWeight: "regular", marginTop: "2em", fontSize: "1.5em"}}>
+        <h2 style={{ fontWeight: "regular", marginTop: "2em", fontSize: "1.8em"}}>
           -Edsger W. Dijkstra, "Notes On Structured Programming"
         </h2>
       </motion.div>

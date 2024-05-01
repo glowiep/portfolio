@@ -11,10 +11,17 @@ import {
   Link,
 } from "@chakra-ui/react";
 
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import { MotionBox, MotionButton } from "../../../Motion";
 import { FaGithub } from "react-icons/fa";
 
 function Project({ name, description, imageURL, live, liveURL, githubURL, stack }) {
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Trigger animation only once
+    threshold: 0.5, // Percentage of the element in view to trigger animation
+  });
+  
   const liveButtonStyles = {
     whileTap: { scale: 0.5, boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)' },
     whileHover: { scale: 1.1 },
@@ -41,30 +48,36 @@ function Project({ name, description, imageURL, live, liveURL, githubURL, stack 
   }
 
   return (
-    <Container maxW="5xl" px={{ base: 6, md: 3 }} py={10}>
+    <Container maxW="5xl" px={{ base: 6, md: 3 }} py={20}>
       <Stack direction={{ base: "column-reverse", md: "row" }}>
-        <Stack direction="column" spacing={6}>
-          <Heading
-            as="h3"            
-            fontSize="2.5rem"
-            fontWeight="bold"
-            textAlign="left"
-            maxW={{ base: "100%", md: "480px" }}
+        <Stack direction="column" spacing={6} ref={ref}  >
+          <motion.div
+            initial={{ opacity: 0, y: 20 }} 
+            animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 60 }} 
+            transition={{ duration: 0.5 }}
           >
-            {name}
-          </Heading>
-          <Text
-            fontSize="1.5rem"
-            textAlign="left"
-            lineHeight="1.375"
-            fontWeight="300"
-            maxW={{ base: "100%", md: "470px" }}
-          >
-            {description}
-          </Text>
+            <Heading
+              as="h3"            
+              fontSize="2.5rem"
+              fontWeight="bold"
+              textAlign="left"
+              maxW={{ base: "100%", md: "480px" }}
+            >
+              {name}
+            </Heading>
+            <Text
+              fontSize="1.5rem"
+              textAlign="left"
+              lineHeight="1.375"
+              fontWeight="300"
+              maxW={{ base: "100%", md: "470px" }}
+            >
+              {description}
+            </Text>
+          </motion.div>
           <HStack spacing={3}>
             {live && (
-              <Link href={liveURL} isExternal target="_blank" textDecoration="none">
+              <Link href={liveURL} isExternal target="_blank" _hover={{ textDecoration: 'none' }}>
                 <MotionButton
                   {...liveButtonStyles}
                 >
@@ -72,7 +85,7 @@ function Project({ name, description, imageURL, live, liveURL, githubURL, stack 
                 </MotionButton>
               </Link>
             )}
-            <Link href={githubURL} isExternal target="_blank" textDecoration="none">
+            <Link href={githubURL} isExternal target="_blank" _hover={{ textDecoration: 'none' }}>
               <Center
                 p={2}
                 px={4}
@@ -86,7 +99,7 @@ function Project({ name, description, imageURL, live, liveURL, githubURL, stack 
                   <FaGithub size="1.5rem"/>
                 </MotionButton>
               </Center>
-              </Link>
+            </Link>
           </HStack>
           <HStack spacing={5}>
             {stack.map((text, index) => (
@@ -113,9 +126,9 @@ function Project({ name, description, imageURL, live, liveURL, githubURL, stack 
             ))}
           </HStack>
         </Stack>
-        <Box ml={{ base: 0, md: 5 }} width="50%">
-        <MotionBox whileHover={{ scale: 1.2 }} rounded="full" shadow="lg">
-          <Link href={live ? liveURL : githubURL} isExternal target="_blank" textDecoration="none">
+        <Box ml={{ base: 0, md: 5 }} width={{ base: "auto", md: "lg" }}>
+        <MotionBox whileHover={{ scale: 1.2}} rounded="full" shadow="lg">
+          <Link href={live ? liveURL : githubURL} isExternal target="_blank" _hover={{ textDecoration: 'none' }}>
             <Image
               w="100%"
               h="100%"

@@ -20,7 +20,7 @@ function Quote() {
         // 'linear(to-t, blue.300, purple.600)',
         // 'linear(to-b, orange.100, purple.600)',
       ]}
-      w="100vw"
+      w="full"
       textAlign="center"
       fontSize={headingFontSize}
       textShadow= '2px 2px 4px rgba(0, 0, 0, 0.5)'

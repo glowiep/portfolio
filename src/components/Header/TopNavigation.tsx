@@ -2,7 +2,6 @@
 import { Flex } from "@chakra-ui/react";
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import "../../styles/components/TopNavigation.css"
 
 import { MotionButton } from "../Motion";

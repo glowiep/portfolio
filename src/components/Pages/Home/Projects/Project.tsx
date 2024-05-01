@@ -36,7 +36,7 @@ function Project({ name, description, imageURL, live, liveURL, githubURL, stack 
           </Text>
           <HStack spacing={3}>
             {live && (
-              <Link href={liveURL} isExternal props={{ target: "_blank"}}>
+              <Link href={liveURL} isExternal target="_blank">
                 <Button
                   colorScheme="teal"
                   variant="solid"
@@ -48,7 +48,7 @@ function Project({ name, description, imageURL, live, liveURL, githubURL, stack 
                 </Button>
               </Link>
             )}
-            <Link href={githubURL} isExternal props={{ target: "_blank"}}>
+            <Link href={githubURL} isExternal target="_blank">
               <Box
                 border="1px solid"
                 borderColor="gray.300"

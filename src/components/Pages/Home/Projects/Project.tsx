@@ -1,24 +1,52 @@
 import {
+  Center,
   Container,
   Heading,
   Stack,
   HStack,
   Text,
-  Button,
   Image,
   Skeleton,
   Box,
   Link,
 } from "@chakra-ui/react";
 
+import { MotionBox, MotionButton } from "../../../Motion";
+import { FaGithub } from "react-icons/fa";
+
 function Project({ name, description, imageURL, live, liveURL, githubURL, stack }) {
+  const liveButtonStyles = {
+    whileTap: { scale: 0.5, boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)' },
+    whileHover: { scale: 1.1 },
+    colorScheme:"teal",
+    variant: "solid",
+    borderRadius: "2em",
+    px: { base: "1.5em", md: "2em" },
+    gap: { base: "0.5em", md: "1em" },
+    fontSize: { base: "sm", md: "lg" },
+  }
+  
+  const githubButtonStyles = {
+    whileTap: { scale: 0.5, boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)' },
+    whileHover: { scale: 1.1 },
+    colorScheme:"purple",
+    border: "1px solid",
+    borderColor: "gray.300",
+    variant: "solid",
+    borderRadius: "2em",
+    background: "transparent",
+    px: { base: "1em", md: "1.5em" },
+    gap: { base: "0.5em", md: "1em" },
+    fontSize: { base: "sm", md: "lg" },
+  }
+
   return (
     <Container maxW="5xl" px={{ base: 6, md: 3 }} py={10}>
       <Stack direction={{ base: "column-reverse", md: "row" }}>
         <Stack direction="column" spacing={6}>
           <Heading
-            as="h3"
-            size="lg"
+            as="h3"            
+            fontSize="2.5rem"
             fontWeight="bold"
             textAlign="left"
             maxW={{ base: "100%", md: "480px" }}
@@ -26,7 +54,7 @@ function Project({ name, description, imageURL, live, liveURL, githubURL, stack 
             {name}
           </Heading>
           <Text
-            fontSize="1.2rem"
+            fontSize="1.5rem"
             textAlign="left"
             lineHeight="1.375"
             fontWeight="300"
@@ -36,31 +64,28 @@ function Project({ name, description, imageURL, live, liveURL, githubURL, stack 
           </Text>
           <HStack spacing={3}>
             {live && (
-              <Link href={liveURL} isExternal target="_blank">
-                <Button
-                  colorScheme="teal"
-                  variant="solid"
-                  size="md"
-                  rounded="md"
-                  boxShadow="md"
+              <Link href={liveURL} isExternal target="_blank" textDecoration="none">
+                <MotionButton
+                  {...liveButtonStyles}
                 >
                   Visit Site
-                </Button>
+                </MotionButton>
               </Link>
             )}
-            <Link href={githubURL} isExternal target="_blank">
-              <Box
-                border="1px solid"
-                borderColor="gray.300"
+            <Link href={githubURL} isExternal target="_blank" textDecoration="none">
+              <Center
                 p={2}
                 px={4}
                 lineHeight={1.18}
                 rounded="md"
                 boxShadow="md"
-                as={Link}
+                gap="0.5em"
               >
-                Open on Github
-              </Box>
+                <MotionButton {...githubButtonStyles}>
+                  View in Github
+                  <FaGithub size="1.5rem"/>
+                </MotionButton>
+              </Center>
               </Link>
           </HStack>
           <HStack spacing={5}>
@@ -89,15 +114,19 @@ function Project({ name, description, imageURL, live, liveURL, githubURL, stack 
           </HStack>
         </Stack>
         <Box ml={{ base: 0, md: 5 }} width="50%">
-          <Image
-            w="100%"
-            h="100%"
-            minW={{ base: "auto", md: "30rem" }}
-            objectFit="cover"
-            src={imageURL}
-            rounded="md"
-            fallback={<Skeleton />}
-          />
+        <MotionBox whileHover={{ scale: 1.2 }} rounded="full" shadow="lg">
+          <Link href={live ? liveURL : githubURL} isExternal target="_blank" textDecoration="none">
+            <Image
+              w="100%"
+              h="100%"
+              minW={{ base: "auto", md: "30rem" }}
+              objectFit="cover"
+              src={imageURL}
+              rounded="md"
+              fallback={<Skeleton />}
+            />
+          </Link>
+        </MotionBox>
         </Box>
       </Stack>
     </Container>

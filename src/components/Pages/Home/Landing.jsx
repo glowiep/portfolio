@@ -20,7 +20,7 @@ function Landing() {
     _hover: {
       bg: "#A57DF4",
     },
-    fontSize: { base: "xs", md: "lg" },
+    fontSize: { base: "15", md: "lg" },
   }
 
   return (

@@ -1,5 +1,5 @@
 import Quote from "../Quote.jsx";
-import { Flex, Text, Box } from "@chakra-ui/react";
+import { Flex, Box, Heading } from "@chakra-ui/react";
 import Project from "./Project.js";
 
 import { projectList } from "../../../../constants/projectList.js";
@@ -14,15 +14,7 @@ function ProjectList() {
         alignItems="center" // Center content horizontally
       >
         <Box pt="60px">
-          <Text
-            bg="white"
-            bgClip="text"
-            fontSize="6xl"
-            fontWeight="extrabold"
-            paddingBottom="1.5em"
-          >
-            My Projects
-          </Text>
+          <Heading size='lg' fontWeight="extrabold" fontSize={{base: '5xl', md: '6xl'}} >My Projects</Heading>
         </Box>
         {projectList.map((project, index) => {
           return (

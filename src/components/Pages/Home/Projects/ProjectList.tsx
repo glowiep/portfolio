@@ -6,15 +6,19 @@ import { projectList } from "../../../../constants/projectList.js";
 
 function ProjectList() {
   return (
-    <section id="project-list">
-      <Quote />
+    <section>
       <Flex
         direction="column" // Set flex direction to column
         justifyContent="center" // Center content vertically
         alignItems="center" // Center content horizontally
       >
-        <Box pt="60px">
-          <Heading size='lg' fontWeight="extrabold" fontSize={{base: '5xl', md: '6xl'}} >My Projects</Heading>
+        <Box pt="60px" 
+        padding={{ base: "10%", md: "5%"}}
+        width="full"
+        textAlign="center"
+        border="solid"
+        >
+          <Heading size='lg' fontWeight="extrabold" fontSize={{base: '4xl', md: '6xl'}} >My Projects</Heading>
         </Box>
         {projectList.map((project, index) => {
           return (
@@ -31,6 +35,7 @@ function ProjectList() {
           );
         })}
       </Flex>
+      <Quote />
     </section>
   );
 }

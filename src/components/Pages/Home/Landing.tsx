@@ -122,6 +122,9 @@ function Landing() {
           </motion.h1>
         </Box>
       </Flex>
+      <Box position="relative" margin="2.5em">
+        <span id="project-list" style={{ color: 'transparent' }}>Projects</span>
+      </Box>
     </section>
   )
 }

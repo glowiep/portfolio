@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Text, Flex, useBreakpointValue, Button } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Typewriter from "./Typewriter";

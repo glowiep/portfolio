@@ -15,6 +15,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { MotionBox, MotionButton } from "../../../Motion";
 import { FaGithub } from "react-icons/fa";
+import { MdOpenInNew } from "react-icons/md";
 
 function Project({ title, description, imageURL, live, liveURL, githubURL, stack }) {
   const { ref, inView } = useInView({
@@ -83,6 +84,7 @@ function Project({ title, description, imageURL, live, liveURL, githubURL, stack
                   {...liveButtonStyles}
                 >
                   Visit Site
+                  <MdOpenInNew />
                 </MotionButton>
               </Link>
             )}

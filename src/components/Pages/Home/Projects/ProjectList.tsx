@@ -1,4 +1,4 @@
-import Quote from "../Quote.jsx";
+import Quote from "../Quote.tsx";
 import { Flex, Box, Heading } from "@chakra-ui/react";
 import Project from "./Project.js";
 

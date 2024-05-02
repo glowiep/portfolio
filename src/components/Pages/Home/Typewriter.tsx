@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const Typewriter = ({ phrases, sleepTime }) => {
   const [currentWord, setCurrentWord] = useState('');
@@ -10,7 +10,7 @@ const Typewriter = ({ phrases, sleepTime }) => {
 
     const typeLetter = () => {
       if (currentLetterIndex < phrases[phraseIndex].length) {
-        setCurrentWord((prev) => phrases[phraseIndex].substring(0, currentLetterIndex + 1));
+        setCurrentWord(() => phrases[phraseIndex].substring(0, currentLetterIndex + 1));
         currentLetterIndex++;
         timeoutId = setTimeout(typeLetter, sleepTime);
       } else {
@@ -20,7 +20,7 @@ const Typewriter = ({ phrases, sleepTime }) => {
 
     const eraseLetter = () => {
       if (currentLetterIndex > 0) {
-        setCurrentWord((prev) => phrases[phraseIndex].substring(0, currentLetterIndex - 1));
+        setCurrentWord(() => phrases[phraseIndex].substring(0, currentLetterIndex - 1));
         currentLetterIndex--;
         timeoutId = setTimeout(eraseLetter, sleepTime);
       } else {

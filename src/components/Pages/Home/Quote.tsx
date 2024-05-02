@@ -1,5 +1,4 @@
-import React, { useRef } from "react";
-import { Center, useBreakpointValue, Button } from "@chakra-ui/react";
+import { Center, useBreakpointValue } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 

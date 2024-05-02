@@ -1,7 +1,5 @@
-// import background from "/home/labber/myProjects/portfolio/gloria-lim-portfolio/portfolio/src/assets/images/gradient.svg"
-
 import "../../../styles/components/Home.css";
-import Landing from "./Landing.jsx"
+import Landing from "./Landing.js"
 import ProjectList from "./Projects/ProjectList.js";
 
 function Home() {

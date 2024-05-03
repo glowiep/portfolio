@@ -81,8 +81,8 @@ const GithubStats = function () {
               />
             </Box>
           </Text>
-          <Text fontSize="3xl">
-            Quality is not an act, it is a habit
+          <Text fontSize="3xl" fontStyle="italic">
+            Quality is not an act, it is a habit.
           </Text>
         </Box>
       </Center>

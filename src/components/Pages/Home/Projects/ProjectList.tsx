@@ -47,14 +47,6 @@ function ProjectList() {
         gap="2em"
         // paddingBottom="5em"
       >
-        <Box pt="60px" 
-        padding={{ base: "10%", md: "5%"}}
-        width="full"
-        textAlign="center"
-        border="solid"
-        >
-          <Heading size='lg' fontWeight="extrabold" fontSize={{base: '4xl', md: '6xl'}} >Github Stats</Heading>
-        </Box>
         <GithubStats />
         <img src="https://ghchart.rshah.org/glowiep" alt="My Github chart" />
       

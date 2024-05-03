@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Container, Text, SimpleGrid, Box, Center } from "@chakra-ui/react";
+import { Container, Text, SimpleGrid, Box, Center, Link } from "@chakra-ui/react";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -68,9 +68,9 @@ const GithubStats = function () {
     <Container maxW="7xl" p={{ base: 5, md: 10 }}>
       <Center>
         <Box textAlign="center">
-          <Text fontWeight="extrabold" fontSize="x-large" mb={2}>
+          <Text fontWeight="extrabold" fontSize="5xl" mb={2}>
             <Box as="span" display="inline-block" position="relative">
-              Github Stats
+              <Link href="https://github.com/glowiep/" isExternal target="_blank" _hover={{ textDecoration: 'none' }}>Github Stats</Link>
               <Box
                 as="span"
                 display="block"
@@ -81,8 +81,8 @@ const GithubStats = function () {
               />
             </Box>
           </Text>
-          <Text>
-            Pushing the limits of my creativity, one line of code at a time.
+          <Text fontSize="3xl">
+            Quality is not an act, it is a habit
           </Text>
         </Box>
       </Center>

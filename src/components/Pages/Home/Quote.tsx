@@ -13,7 +13,8 @@ function Quote() {
     <Center
       ref={ref}      
       padding="10%"
-      marginBottom="3em"
+      marginTop="3em"
+      // marginBottom="3em"
       bgGradient={[
         "linear(to-tr, teal.300, yellow.400)",
         // 'linear(to-t, blue.300, purple.600)',

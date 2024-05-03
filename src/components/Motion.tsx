@@ -19,4 +19,4 @@ export const MotionFlex = motion(
   })
 );
 
-export const MotionButton = motion(Button);
+export const MotionButton = motion(Button); 

@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-import { Container, Text, SimpleGrid, Box, Center } from '@chakra-ui/react';
+import { Container, Text, SimpleGrid, Box, Center } from "@chakra-ui/react";
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const GithubStats = function () {
   const initialState = {
@@ -17,7 +19,8 @@ const GithubStats = function () {
     },
   };
   const [githubStats, setGithubStats] = useState(initialState);
-  console.log(githubStats.currentStreak);
+  const { ref, inView } = useInView({ triggerOnce: true });
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -34,7 +37,32 @@ const GithubStats = function () {
       }
     };
     fetchData();
-  }, []);
+  }, [inView]);
+
+  const totalContributionsCount = useMotionValue(0);
+  const currentStreakCount = useMotionValue(0);
+  const longestStreakCount = useMotionValue(0);
+
+  useEffect(() => {
+    if (inView) {
+      animate(totalContributionsCount, githubStats.totalContributions, {
+        duration: 2,
+      });
+      animate(currentStreakCount, githubStats.currentStreak.days, {
+        duration: 2,
+      });
+      animate(longestStreakCount, githubStats.longestStreak.days, {
+        duration: 2,
+      });
+    }
+  }, [inView]);
+
+  const roundedTotalContributions = useTransform(
+    totalContributionsCount,
+    Math.round
+  );
+  const roundedCurrentStreak = useTransform(currentStreakCount, Math.round);
+  const roundedLongestStreak = useTransform(longestStreakCount, Math.round);
 
   return (
     <Container maxW="7xl" p={{ base: 5, md: 10 }}>
@@ -47,41 +75,49 @@ const GithubStats = function () {
                 as="span"
                 display="block"
                 position="absolute"
-                bg={'blue.600'}
-                w={'100%'}
-                h={'1px'}
+                bg={"blue.600"}
+                w={"100%"}
+                h={"1px"}
               />
             </Box>
           </Text>
-          <Text>Pushing the limits of my creativity, one line of code at a time.</Text>
+          <Text>
+            Pushing the limits of my creativity, one line of code at a time.
+          </Text>
         </Box>
       </Center>
-      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 2, sm: 5 }} mt={12} mb={4}>
-          <Box p={{ base: 2, sm: 5 }} textAlign="center">
-            <Text fontWeight="extrabold" fontSize="xx-large">
-              {githubStats.totalContributions}
+      <SimpleGrid
+        columns={{ base: 1, md: 3 }}
+        spacing={{ base: 2, sm: 5 }}
+        mt={12}
+        mb={4}
+      >
+        <Box p={{ base: 2, sm: 5 }} textAlign="center">
+          <motion.div ref={ref}>
+            <Text as={motion.div} fontWeight="extrabold" fontSize="xx-large">
+              {roundedTotalContributions}
             </Text>
-            <Text fontSize="sm">Total Contributions</Text>
-          </Box>
-          <Box p={{ base: 2, sm: 5 }} textAlign="center">
-            <Text fontWeight="extrabold" fontSize="xx-large">
-              {githubStats.currentStreak.days}
+          </motion.div>
+          <Text fontSize="sm">Total Contributions</Text>
+        </Box>
+        <Box p={{ base: 2, sm: 5 }} textAlign="center">
+          <motion.div ref={ref}>
+            <Text as={motion.div} fontWeight="extrabold" fontSize="xx-large">
+              {roundedCurrentStreak}
             </Text>
-            <Text fontSize="sm">Current Streak</Text>
-          </Box>
-          <Box p={{ base: 2, sm: 5 }} textAlign="center">
-            <Text fontWeight="extrabold" fontSize="xx-large">
-              {githubStats.longestStreak.days}
+          </motion.div>
+          <Text fontSize="sm">Current Streak</Text>
+        </Box>
+        <Box p={{ base: 2, sm: 5 }} textAlign="center">
+          <motion.div ref={ref}>
+            <Text as={motion.div} fontWeight="extrabold" fontSize="xx-large">
+              {roundedLongestStreak}
             </Text>
-            <Text fontSize="sm">Longest Streak</Text>
-          </Box>
+          </motion.div>
+          <Text fontSize="sm">Longest Streak</Text>
+        </Box>
       </SimpleGrid>
     </Container>
-    // <div>
-    //   Total Contributions: {githubStats.totalContributions}
-    //   Current Streak: {githubStats.currentStreak.days}
-    //   Longest Streak: {githubStats.longestStreak.days}
-    // </div>
   );
 };
 

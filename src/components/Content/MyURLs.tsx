@@ -1,6 +1,6 @@
 import {
   Link,
-  VStack,
+  Tooltip,
   IconButton,
   Center
 } from '@chakra-ui/react';
@@ -15,19 +15,21 @@ const iconProps = {
 const MyUrls = function() {
   return (
     <Center textAlign="center" bg='gray.300'rounded="full" gap="2em" py="0.7em" px="2em">
-          {urlList.author.accounts.map((sc, index) => (
+          {urlList.author.accounts.map((item, index) => (
             <MotionBox whileHover={{ scale: 1.2 }} rounded="full">
+              <Tooltip label={item.label}>
               <IconButton
                 key={index}
                 as={Link}
                 isExternal
-                href={sc.url}
-                aria-label={sc.label}
-                colorScheme={sc.type}
-                icon={sc.icon}
+                href={item.url}
+                aria-label={item.label}
+                colorScheme={item.type}
+                icon={item.icon}
                 rounded="full"
                 {...iconProps}
               />
+              </Tooltip>
             </MotionBox>
           ))}
         </Center>

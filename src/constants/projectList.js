@@ -33,7 +33,7 @@ export const projectList = [
     githubURL: "https://github.com/glowiep/WikiMaps",
     live: true,
     liveURL: "https://wikimaps.up.railway.app/",
-    stack: ["React", "MUI"],
+    stack: ["ExpressJS", "NodeJS", "LeafletJS", "SASS"],
   },
 ];
 

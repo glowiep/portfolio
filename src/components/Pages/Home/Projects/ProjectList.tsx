@@ -38,8 +38,6 @@ function ProjectList() {
         })}
         
       </Flex>
-      
-      <Quote />
 
       {/* Github Stats */}
       <Flex
@@ -47,7 +45,7 @@ function ProjectList() {
         justifyContent="center"
         alignItems="center"
         gap="2em"
-        paddingBottom="5em"
+        // paddingBottom="5em"
       >
         <Box pt="60px" 
         padding={{ base: "10%", md: "5%"}}
@@ -59,7 +57,8 @@ function ProjectList() {
         </Box>
         <GithubStats />
         <img src="https://ghchart.rshah.org/glowiep" alt="My Github chart" />
-
+      
+        <Quote />
       </Flex>
     </section>
   );

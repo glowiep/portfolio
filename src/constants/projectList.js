@@ -15,7 +15,7 @@ export const projectList = [
     githubURL: "https://github.com/glowiep/country-api",
     live: false,
     liveURL: "",
-    stack: ["Prisma", "Typescript", "Express"],
+    stack: ["Prisma", "Typescript", "ExpressJS"],
   },
   {
     title: "Quick Memo",

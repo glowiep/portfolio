@@ -1,6 +1,6 @@
 import { extendTheme } from '@chakra-ui/react'
 import type { StyleFunctionProps } from '@chakra-ui/styled-system'
-import '@fontsource-variable/roboto-slab'
+
 // //  color mode config
 // const config: ThemeConfig = {
 //   initialColorMode: 'light',

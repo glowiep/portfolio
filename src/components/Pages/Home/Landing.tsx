@@ -92,7 +92,7 @@ function Landing() {
               }}
             >
               <Typewriter
-                phrases={["Create", "Learn", "Grow", "Build Connections"]}
+                phrases={["Create", "Learn", "Grow", "Craft Clean Code"]}
                 sleepTime={100}
               />
               <span id="cursor">|</span>

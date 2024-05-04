@@ -34,7 +34,7 @@ function AboutMe() {
             WebkitBackgroundClip: "text",
             fontSize: "2em",
             textAlign: "center",
-            paddingTop: "2em",
+            paddingTop: "1.5em",
           }}
         >
           <MotionBox
@@ -79,12 +79,11 @@ function AboutMe() {
             paddingLeft: "15%",
             paddingRight: "15%",
             textAlign: "center",
-            paddingTop: "1.25em",
+            paddingTop: "2em",
             lineHeight: "2em",
           }}
         >
-          One of the most important things to me in software development is
-          clean, self-documenting code. 
+          In my opinion, one of the most important principals in software development is maintaining clean, self-documenting code. 
         </motion.h1>
       </Flex>
       <Milestones />

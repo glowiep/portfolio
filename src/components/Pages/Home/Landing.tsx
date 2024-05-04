@@ -22,6 +22,7 @@ function Landing() {
 
   return (
     <section>
+      <span id="home" style={{ position: 'absolute', left: '-9999px' }}>.</span>
       <Flex
         direction="column"
         justifyContent="center"
@@ -123,7 +124,7 @@ function Landing() {
         </Box>
       </Flex>
       <Box position="relative" margin="2.5em">
-        <span id="project-list" style={{ color: 'transparent' }}>Projects</span>
+        <span id="project-list" style={{ color: 'transparent' }}>.</span>
       </Box>
     </section>
   )

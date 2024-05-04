@@ -17,12 +17,20 @@ const Milestones = () => {
   const linkColor = 'blue.400';
   const linkHoverColor = 'blue.600';
 
+  const milestonesList = [
+    {
+      year: 2023,
+      milestones: [
+        "Enrolled in Lighthouse Labs Full-Stack Web Development Program",
+      ]
+    }
+  ]
   return (
     <Container maxW="7xl" p={{ base: 2, sm: 10 }}>
       <VStack textAlign="start" align="start" mb={5}>
         <Box zIndex={5}>
           <Heading fontSize="4xl" fontWeight="600" my={5}>
-            2021
+            2023
           </Heading>
           <Box>
             <MilestoneItem icon={FaTools}>

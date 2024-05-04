@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Text, Box, Flex, Avatar } from "@chakra-ui/react";
 import { MotionBox } from "../Motion";
-import Milestones from "../Content/Milestones";
+// import Milestones from "../Content/Milestones";
 import Timeline from "../Content/Timeline";
 import MyUrls from "../Content/MyURLs";
 
@@ -9,10 +9,10 @@ function AboutMe() {
   return (
     <section>
       <Flex
-        direction="column" // Set flex direction to column
-        justifyContent="center" // Center content vertically
-        alignItems="center" // Center content horizontally
-        h="100vh" // Set height to full viewport height
+        direction="column" 
+        justifyContent="center"
+        alignItems="center" 
+        h="100vh"
       >
         <Box pt="60px">
           <Text
@@ -86,7 +86,7 @@ function AboutMe() {
           In my opinion, one of the most important principals in software development is maintaining clean, self-documenting code. 
         </motion.h1>
       </Flex>
-      <Milestones />
+      {/* <Milestones /> */}
       <Timeline />
       <div>
         Favorite books: The Clean Coder by Robert C. Martin

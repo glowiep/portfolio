@@ -25,7 +25,8 @@ export const urlList = {
         icon: <FaDev size="2em"/>
       },
       {
-        url: 'https://bit.ly/gloria_lim',
+        url: 'https://bit.ly/gloria_lim',  
+        // url: '../../../../../../public/1_GL_Resume.pdf',
         label: 'Resume',
         type: 'gray',
         icon: <GrDocumentDownload size="2em"/>

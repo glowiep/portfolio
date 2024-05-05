@@ -2,7 +2,7 @@ export const projectList = [
   {
     title: "SmartAgent",
     description:"SmartAgent is a customer support ticket management application that supports the sending and receiving of emails.",
-    imageURL: "../../../../../public/images/projects/smartagent.png",
+    imageURL: "https://github.com/glowiep/portfolio/blob/main/public/images/projects/smartagent.png?raw=true",
     githubURL: "https://github.com/glowiep/SmartAgent",
     live: false,
     liveURL: "",
@@ -20,7 +20,7 @@ export const projectList = [
   {
     title: "Quick Memo",
     description:"Quick Memo is a responsive React web app with a minimalist interface for keeping track of notes.",
-    imageURL: "../../../../public/images/projects/quick-memo.png",
+    imageURL: "https://github.com/glowiep/portfolio/blob/main/public/images/projects/quick-memo.png?raw=true",
     githubURL: "https://github.com/glowiep/quick-memo",
     live: true,
     liveURL: "https://glowiep.github.io/quick-memo/",

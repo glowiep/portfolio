@@ -2,7 +2,7 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://glowiep.github.io/portfolio/#",
+  "homepage": "https://glorialim.me/portfolio/#",
   "type": "module",
   "scripts": {
     "dev": "vite",

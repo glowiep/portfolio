@@ -1,5 +1,6 @@
 import { Box, Text, Flex, useBreakpointValue, Button } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import Typewriter from "./Typewriter";
 import "../../../styles/components/Home.css";
 
@@ -65,7 +66,7 @@ function Landing() {
               paddingTop: "1.25em",
             }}
           >
-            I craft digital experiences that are performant, accessible and fulfils the user's needs
+            I craft digital experiences that are performant, accessible and fulfils the user's needs.
           </motion.h1>
 
           <motion.h1
@@ -115,11 +116,11 @@ function Landing() {
               textAlign: 'center',
             }}
           >
-            <a href="#project-list">
+            <Link to="/#project-list">
               <Button {...buttonStyles}>
                 View My Projects
               </Button>
-            </a>
+            </Link>
           </motion.h1>
         </Box>
       </Flex>

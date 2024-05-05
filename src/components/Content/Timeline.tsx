@@ -52,7 +52,7 @@ const Timeline = () => {
 
   return (
     <Container maxWidth="7xl" p={{ base: 2, sm: 10 }}>
-      <chakra.h3 fontSize="4xl" fontWeight="bold" mb={18} textAlign="center">
+      <chakra.h3 fontSize="5xl" fontWeight="bold" mb={18} textAlign="center">
         My Journey
       </chakra.h3>
       {milestones.map((milestone) => (

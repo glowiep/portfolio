@@ -16,10 +16,9 @@ const MyUrls = function() {
   return (
     <Center textAlign="center" bg='gray.300'rounded="full" gap="2em" py="0.7em" px={{ base: "0.6em", md:"2em"}}>
           {urlList.author.accounts.map((item, index) => (
-            <MotionBox whileHover={{ scale: 1.2 }} rounded="full">
+            <MotionBox whileHover={{ scale: 1.2 }} rounded="full" key={index}>
               <Tooltip label={item.label}>
               <IconButton
-                key={index}
                 as={Link}
                 isExternal
                 href={item.url}

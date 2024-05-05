@@ -4,6 +4,7 @@ import { MotionBox } from "../Motion";
 // import Milestones from "../Content/Milestones";
 import Timeline from "../Content/Timeline";
 import MyUrls from "../Content/MyURLs";
+import FavoriteBooks from "../Content/FavoriteBooks";
 
 function AboutMe() {
   return (
@@ -83,16 +84,22 @@ function AboutMe() {
             lineHeight: "2em",
           }}
         >
-          In my opinion, one of the most important principals in software development is maintaining clean, self-documenting code. 
+          Hello! My name is Gloria. <br />
+          I enjoy working on React side-projects during my free time. <br />
+          {/*           
+           Similar to when facing a challenging code, 
+           I am also a Boxing Coach where I break down a complex move into modular steps, 
+          and teach athletes to work incrementally and iteratively to master their craft. 
+          */}
+          
+          {/* In my opinion, one of the most important principals in software development is maintaining clean, self-documenting code.  */}
         </motion.h1>
       </Flex>
       {/* <Milestones /> */}
       <Timeline />
-      <div>
-        Favorite books: The Clean Coder by Robert C. Martin
-        <br />
-        Laws of UX by Jon Yablonski
-      </div>
+
+      <FavoriteBooks />
+      
     </section>
   );
 }

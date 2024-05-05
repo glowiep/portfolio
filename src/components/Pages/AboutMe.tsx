@@ -46,7 +46,7 @@ function AboutMe() {
             <Avatar
               size="2xl"
               name="Gloria Lim"
-              src="public/images/profile-pic-1.PNG"
+              src="https://github.com/glowiep/portfolio/blob/main/public/images/profile-pic-1.PNG?raw=true"
               showBorder={true}
             />
           </MotionBox>

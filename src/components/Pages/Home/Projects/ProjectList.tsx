@@ -18,7 +18,8 @@ function ProjectList() {
         padding={{ base: "10%", md: "5%"}}
         width="full"
         textAlign="center"
-        border="solid"
+        borderTop="solid"
+        borderBottom="solid"
         >
           <Heading size='lg' fontWeight="extrabold" fontSize={{base: '4xl', md: '6xl'}} >My Projects</Heading>
         </Box>

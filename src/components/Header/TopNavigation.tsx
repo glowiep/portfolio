@@ -62,7 +62,7 @@ function TopNavigation() {
         minW="20rem" 
       >
         <a href="/#home"><MotionButton {...buttonStyles}>Home</MotionButton></a>
-        <a href="/#project-list"><MotionButton {...buttonStyles}>Projects</MotionButton></a>
+        <a href="/portfolio/#project-list"><MotionButton {...buttonStyles}>Projects</MotionButton></a>
         {/* <Link to="/"><MotionButton {...buttonStyles}>Work</MotionButton></Link> */}
         <Link to="/AboutMe"><MotionButton {...buttonStyles}>About Me</MotionButton></Link>
       </Flex>

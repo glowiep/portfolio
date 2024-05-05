@@ -46,10 +46,8 @@ function ProjectList() {
         justifyContent="center"
         alignItems="center"
         gap="2em"
-        // paddingBottom="5em"
       >
         <GithubStats />
-        <img src="https://ghchart.rshah.org/glowiep" alt="My Github chart" />
       
         <Quote />
       </Flex>

@@ -117,6 +117,10 @@ const GithubStats = function () {
           <Text fontSize="sm">Longest Streak</Text>
         </Box>
       </SimpleGrid>
+      
+      <Box p={{ base: 2, sm: 5 }} textAlign="center" display="flex" justifyContent="center">
+        <img src="https://ghchart.rshah.org/glowiep" alt="My Github chart" />
+      </Box>        
     </Container>
   );
 };

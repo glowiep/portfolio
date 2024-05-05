@@ -3,7 +3,7 @@ import TopNavigation from "./components/Header/TopNavigation";
 import "./styles/App.css";
 
 import { useLayoutEffect } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import AboutMe from "./components/Pages/AboutMe";
 
 function Page ({ children  }) {
@@ -22,22 +22,21 @@ function Page ({ children  }) {
 }
 const AppRoutes = () => {
  return (
-  <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/AboutMe" element={<AboutMe /> } />
-    {/* Add more routes here */}
-  </Routes>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/AboutMe" element={<AboutMe /> } />
+    </Routes>
  )
 }
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <TopNavigation />
       <Page>
         <AppRoutes />
       </Page>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

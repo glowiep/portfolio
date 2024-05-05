@@ -23,8 +23,8 @@ function Page ({ children  }) {
 const AppRoutes = () => {
  return (
   <Routes>
-    <Route path="/portfolio" element={<Home />} />
-    <Route path="/portfolio/AboutMe" element={<AboutMe /> } />
+    <Route path="/" element={<Home />} />
+    <Route path="/AboutMe" element={<AboutMe /> } />
     {/* Add more routes here */}
   </Routes>
  )

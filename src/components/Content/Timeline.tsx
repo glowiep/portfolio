@@ -30,7 +30,7 @@ const milestones = [
     date: 'SEPTEMBER, 2020',
     title: 'Transportation Analyst',
     description:
-      'I have been working as a Transportation Analyst since September 2020.'
+      'I have been working as a Transportation Analyst at BusPlanner Inc. since September 2020.'
   },
   {
     id: 4,

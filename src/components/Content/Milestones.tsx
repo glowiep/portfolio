@@ -17,14 +17,14 @@ const Milestones = () => {
   const linkColor = 'blue.400';
   const linkHoverColor = 'blue.600';
 
-  const milestonesList = [
-    {
-      year: 2023,
-      milestones: [
-        "Enrolled in Lighthouse Labs Full-Stack Web Development Program",
-      ]
-    }
-  ]
+  // const milestonesList = [
+  //   {
+  //     year: 2023,
+  //     milestones: [
+  //       "Enrolled in Lighthouse Labs Full-Stack Web Development Program",
+  //     ]
+  //   }
+  // ]
   return (
     <Container maxW="7xl" p={{ base: 2, sm: 10 }}>
       <VStack textAlign="start" align="start" mb={5}>

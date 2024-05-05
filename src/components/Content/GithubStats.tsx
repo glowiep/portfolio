@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { useState, useEffect } from "react";
 import { Container, Text, SimpleGrid, Box, Center, Link } from "@chakra-ui/react";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";

@@ -61,7 +61,7 @@ function TopNavigation() {
         maxW="screen-xl" // Limit maximum width
         minW="20rem" 
       >
-        <a href="/portfolio/Home/#home"><MotionButton {...buttonStyles}>Home</MotionButton></a>
+        <Link to="/"><MotionButton {...buttonStyles}>Home</MotionButton></Link>
         <a href="/portfolio/#project-list"><MotionButton {...buttonStyles}>Projects</MotionButton></a>
         {/* <Link to="/"><MotionButton {...buttonStyles}>Work</MotionButton></Link> */}
         <Link to="/AboutMe"><MotionButton {...buttonStyles}>About Me</MotionButton></Link>

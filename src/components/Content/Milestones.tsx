@@ -94,7 +94,7 @@ const Milestones = () => {
                 _hover={{ color: linkHoverColor }}
                 isExternal
               >
-                source on Github
+                source on GitHub
               </Link>
               .
             </MilestoneItem>

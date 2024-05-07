@@ -42,7 +42,7 @@ const milestones = [
     id: 5,
     date: 'MAY 20, 2017',
     title: 'First Commit',
-    description: `Ever since I pushed my first commit to Github in May of 2017, part of me had always wanted to be able to build visually appealing applications that appear simple, but abstracts the layer of complexity for the end user. `
+    description: `Ever since I pushed my first commit to GitHub in May of 2017, part of me had always wanted to be able to build visually appealing applications that appear simple, but abstracts the layer of complexity for the end user. `
   },
 ];
 

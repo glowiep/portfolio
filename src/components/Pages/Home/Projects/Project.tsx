@@ -98,7 +98,7 @@ function Project({ title, description, imageURL, live, liveURL, githubURL, stack
                 gap="0.5em"
               >
                 <MotionButton {...githubButtonStyles}>
-                  View in Github
+                  View in GitHub
                   <FaGithub size="1.5rem"/>
                 </MotionButton>
               </Center>

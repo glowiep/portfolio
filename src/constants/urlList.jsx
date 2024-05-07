@@ -8,7 +8,7 @@ export const urlList = {
     accounts: [
       {
         url: 'https://github.com/glowiep',
-        label: 'Github',
+        label: 'GitHub',
         type: 'gray',
         icon: <FaGithub size="2em"/>
       },

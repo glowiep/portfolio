@@ -6,10 +6,8 @@ import { useLayoutEffect, useEffect } from "react";
 import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import AboutMe from "./components/Pages/AboutMe";
 
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 const VITE_GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
-
-ReactGA.initialize(VITE_GA_MEASUREMENT_ID);
 
 function Page ({ children  }) {
   const { pathname } = useLocation();  // useLocation hook to get the current pathname
@@ -35,8 +33,9 @@ const AppRoutes = () => {
 }
 
 function App() {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search)
+  useEffect(() => {    
+    ReactGA.initialize(VITE_GA_MEASUREMENT_ID);
+    ReactGA.send({ hitType: "pageview", page: "/", title: "Porfolio" });
   }, []);
 
   return (

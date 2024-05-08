@@ -12,10 +12,28 @@ const VITE_GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
 function Page ({ children  }) {
   const { pathname } = useLocation();  // useLocation hook to get the current pathname
 
+  const hash = location.hash
+  // Find the index of '#' starting from the end of the string
+  const hashIndex = hash.lastIndexOf("#");
+
+  let hashTitle = ""
+  if (hashIndex !== -1) {
+    // Extract characters after '#' starting from the right
+    hashTitle = hash.substring(hashIndex + 1);
+    // console.log("hash title: ", hashTitle); // Outputs "substring"
+  } else {
+    // console.log("No '#' found in the text.");
+  }
+
   // Scroll to top on route change
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
+  useEffect(() => {    
+    ReactGA.initialize(VITE_GA_MEASUREMENT_ID);
+    ReactGA.send({ hitType: "pageview", page: pathname, title: hashTitle });
+  }, [pathname, hash]);
 
   return (
     <div style={{ overflowY: "hidden" }}>
@@ -32,11 +50,11 @@ const AppRoutes = () => {
  )
 }
 
-function App() {
-  useEffect(() => {    
-    ReactGA.initialize(VITE_GA_MEASUREMENT_ID);
-    ReactGA.send({ hitType: "pageview", page: "/", title: "Porfolio" });
-  }, []);
+function App() {  
+  // useEffect(() => {    
+  //   ReactGA.initialize(VITE_GA_MEASUREMENT_ID);
+  //   ReactGA.send({ hitType: "pageview", page: {pathname}, title: "Porfolio" });
+  // }, []);
 
   return (
     <HashRouter>

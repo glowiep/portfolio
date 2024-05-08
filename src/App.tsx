@@ -2,9 +2,14 @@ import Home from "./components/Pages/Home/Home";
 import TopNavigation from "./components/Header/TopNavigation";
 import "./styles/App.css";
 
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useEffect } from "react";
 import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import AboutMe from "./components/Pages/AboutMe";
+
+import ReactGA from "react-ga";
+const VITE_GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
+
+ReactGA.initialize(VITE_GA_MEASUREMENT_ID);
 
 function Page ({ children  }) {
   const { pathname } = useLocation();  // useLocation hook to get the current pathname
@@ -30,6 +35,10 @@ const AppRoutes = () => {
 }
 
 function App() {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search)
+  }, []);
+
   return (
     <HashRouter>
       <TopNavigation />

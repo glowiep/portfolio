@@ -17,6 +17,8 @@ import { MotionBox, MotionButton } from "../../../Motion";
 import { FaGithub } from "react-icons/fa";
 import { MdOpenInNew } from "react-icons/md";
 
+import ReactGA from "react-ga4"
+
 function Project({ title, description, imageURL, live, liveURL, githubURL, stack }) {
   const { ref, inView } = useInView({
     triggerOnce: true, // Trigger animation only once
@@ -47,6 +49,15 @@ function Project({ title, description, imageURL, live, liveURL, githubURL, stack
     gap: { base: "0.5em", md: "1em" },
     fontSize: { base: "sm", md: "lg" },
   }
+
+  const handleClick = (project) => {
+    console.log(project)
+    ReactGA.event({
+      category: 'Project Links',
+      action: 'Click',
+      label: project
+    })
+  };
 
   return (
     <Container maxW="5xl" px={{ base: 6, md: 3 }} py={20}>
@@ -79,7 +90,7 @@ function Project({ title, description, imageURL, live, liveURL, githubURL, stack
           </motion.div>
           <HStack spacing={3}>
             {live && (
-              <Link href={liveURL} isExternal target="_blank" _hover={{ textDecoration: 'none' }}>
+              <Link href={liveURL} isExternal target="_blank" _hover={{ textDecoration: 'none' }} onClick={() => handleClick(`${title} Site`)}>
                 <MotionButton
                   {...liveButtonStyles}
                 >
@@ -88,7 +99,7 @@ function Project({ title, description, imageURL, live, liveURL, githubURL, stack
                 </MotionButton>
               </Link>
             )}
-            <Link href={githubURL} isExternal target="_blank" _hover={{ textDecoration: 'none' }}>
+            <Link href={githubURL} isExternal target="_blank" _hover={{ textDecoration: 'none' }} onClick={() => handleClick(`${title} Github`)}>
               <Center
                 p={2}
                 px={4}

@@ -12,7 +12,18 @@ const iconProps = {
   isRound: true
 };
 
+import ReactGA from 'react-ga4';
+
 const MyUrls = function() {
+  const handleClick = (platform) => {
+    console.log(platform)
+    ReactGA.event({
+      category: 'Social Links',
+      action: 'Click',
+      label: platform
+    })
+  };
+  
   return (
     <Center textAlign="center" bg='gray.300'rounded="full" gap="2em" py="0.7em" px={{ base: "0.6em", md:"2em"}}>
           {urlList.author.accounts.map((item, index) => (
@@ -23,6 +34,7 @@ const MyUrls = function() {
                 isExternal
                 href={item.url}
                 aria-label={item.label}
+                onClick={() => handleClick(item.label)}
                 colorScheme={item.type}
                 icon={item.icon}
                 rounded="full"

@@ -2,38 +2,21 @@ import Home from "./components/Pages/Home/Home";
 import TopNavigation from "./components/Header/TopNavigation";
 import "./styles/App.css";
 
-import { useLayoutEffect, useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import AboutMe from "./components/Pages/AboutMe";
 
-import ReactGA from "react-ga4";
-const VITE_GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
+import { InitializeGoogleAnalytics } from "./utils/googleAnalytics";
 
 function Page ({ children  }) {
   const { pathname } = useLocation();  // useLocation hook to get the current pathname
-
-  const hash = location.hash
-  // Find the index of '#' starting from the end of the string
-  const hashIndex = hash.lastIndexOf("#");
-
-  let hashTitle = ""
-  if (hashIndex !== -1) {
-    // Extract characters after '#' starting from the right
-    hashTitle = hash.substring(hashIndex + 1);
-    // console.log("hash title: ", hashTitle); // Outputs "substring"
-  } else {
-    // console.log("No '#' found in the text.");
-  }
-
+  const hash = location.hash;
+  InitializeGoogleAnalytics(pathname, hash);
+ 
   // Scroll to top on route change
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-
-  useEffect(() => {    
-    ReactGA.initialize(VITE_GA_MEASUREMENT_ID);
-    ReactGA.send({ hitType: "pageview", page: pathname, title: hashTitle });
-  }, [pathname, hash]);
 
   return (
     <div style={{ overflowY: "hidden" }}>
@@ -51,11 +34,6 @@ const AppRoutes = () => {
 }
 
 function App() {  
-  // useEffect(() => {    
-  //   ReactGA.initialize(VITE_GA_MEASUREMENT_ID);
-  //   ReactGA.send({ hitType: "pageview", page: {pathname}, title: "Porfolio" });
-  // }, []);
-
   return (
     <HashRouter>
       <TopNavigation />

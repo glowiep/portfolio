@@ -17,7 +17,7 @@ import { MotionBox, MotionButton } from "../../../Motion";
 import { FaGithub } from "react-icons/fa";
 import { MdOpenInNew } from "react-icons/md";
 
-import ReactGA from "react-ga4"
+import { handleGAClick } from "../../../../utils/googleAnalytics";
 
 function Project({ title, description, imageURL, live, liveURL, githubURL, stack }) {
   const { ref, inView } = useInView({
@@ -50,15 +50,6 @@ function Project({ title, description, imageURL, live, liveURL, githubURL, stack
     fontSize: { base: "sm", md: "lg" },
   }
 
-  const handleClick = (project) => {
-    console.log(project)
-    ReactGA.event({
-      category: 'Project Links',
-      action: 'Click',
-      label: project
-    })
-  };
-
   return (
     <Container maxW="5xl" px={{ base: 6, md: 3 }} py={20}>
       <Stack direction={{ base: "column-reverse", md: "row" }}>
@@ -90,7 +81,7 @@ function Project({ title, description, imageURL, live, liveURL, githubURL, stack
           </motion.div>
           <HStack spacing={3}>
             {live && (
-              <Link href={liveURL} isExternal target="_blank" _hover={{ textDecoration: 'none' }} onClick={() => handleClick(`${title} Site`)}>
+              <Link href={liveURL} isExternal target="_blank" _hover={{ textDecoration: 'none' }} onClick={() => handleGAClick(`${title} Site`, 'Site Links')}>
                 <MotionButton
                   {...liveButtonStyles}
                 >
@@ -99,7 +90,7 @@ function Project({ title, description, imageURL, live, liveURL, githubURL, stack
                 </MotionButton>
               </Link>
             )}
-            <Link href={githubURL} isExternal target="_blank" _hover={{ textDecoration: 'none' }} onClick={() => handleClick(`${title} Github`)}>
+            <Link href={githubURL} isExternal target="_blank" _hover={{ textDecoration: 'none' }} onClick={() => handleGAClick(`${title} Github`, 'Project Links')}>
               <Center
                 p={2}
                 px={4}
@@ -142,7 +133,7 @@ function Project({ title, description, imageURL, live, liveURL, githubURL, stack
         </Stack>
         <Box ml={{ base: 0, md: 5 }} width={{ base: "auto", md: "lg" }}>
         <MotionBox whileHover={{ scale: 1.2}} rounded="full" shadow="lg">
-          <Link href={live ? liveURL : githubURL} isExternal target="_blank" _hover={{ textDecoration: 'none' }}>
+          <Link href={live ? liveURL : githubURL} isExternal target="_blank" _hover={{ textDecoration: 'none' }} onClick={() => handleGAClick(`${title} Site`, `${live ? "Site Links" : "Project Links"}`)}>
             <Image
               w="100%"
               h="100%"

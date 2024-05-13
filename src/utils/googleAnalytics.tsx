@@ -1,6 +1,6 @@
 import ReactGA from "react-ga4";
-const VITE_GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
 import { useEffect } from "react";
+const VITE_GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
 
 /**
  * Initialize Google Analytics (GA4)
@@ -26,10 +26,15 @@ export const InitializeGoogleAnalytics = function(pathname, hash) {
   }, [pathname, hash]);
 }
 
+/**
+ * Handle click events that are to be tracked with GA4
+ * @param label - Event action label
+ * @param category - Event category
+ */
 export const handleGAClick = (label, category) => {
   ReactGA.event({
+    label,
     category,
-    action: 'Click',
-    label
+    action: `Click ${label}`
   })
 };

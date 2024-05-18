@@ -28,7 +28,6 @@ function Project({ title, description, imageURL, live, liveURL, githubURL, stack
   const liveButtonStyles = {
     whileTap: { scale: 0.5, boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)' },
     whileHover: { scale: 1.1 },
-    colorScheme:"teal",
     variant: "solid",
     borderRadius: "2em",
     px: { base: "1.5em", md: "2em" },

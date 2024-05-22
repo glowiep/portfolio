@@ -1,5 +1,14 @@
 export const projectList = [
   {
+    title: "AI Keyword Extractor",
+    description:"This single-page application uses Open AI API to extract the best keyword(s) based on the input text provided.",
+    imageURL: "https://github.com/glowiep/portfolio/blob/main/public/images/projects/ai-keyword-extractor.png?raw=true",
+    githubURL: "https://github.com/glowiep/ai-keyword-extractor",
+    live: true,
+    liveURL: "https://main.d9xvu32d16z2l.amplifyapp.com/",
+    stack: ["React", "Typescript", "Chakra UI", "Open AI"],
+  },
+  {
     title: "SmartAgent",
     description:"SmartAgent is a customer support ticket management application that supports the sending and receiving of emails.",
     imageURL: "https://github.com/glowiep/portfolio/blob/main/public/images/projects/smartagent.png?raw=true",

@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react';
 import { ReactNode } from 'react';
 import { FaBookmark } from "react-icons/fa";
-import { GrInProgress } from "react-icons/gr";
+// import { GrInProgress } from "react-icons/gr";
 
 interface StatsCardProps {
   author: string;
@@ -72,9 +72,9 @@ function FavoriteBooks() {
           icon={<FaBookmark size={'3em'} />}
         />
         <StatsCard
-          author={'David Farley - (Currently listening on Audible)'}
+          author={'David Farley'}
           title={'Modern Software Engineering'}
-          icon={<GrInProgress size={'3em'} />}
+          icon={<FaBookmark size={'3em'} />}
         />
       </SimpleGrid>
     </Box>

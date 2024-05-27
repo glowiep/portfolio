@@ -12,6 +12,10 @@ export const bookList = [
     author: "David Farley"
   },
   // {
+  //   title: "The Pragmatic Programmer",
+  //   author: "David Thomas & Andrew Hunt"
+  // },
+  // {
   //   title: "",
   //   author: ""
   // },

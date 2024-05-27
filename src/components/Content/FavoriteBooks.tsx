@@ -11,6 +11,7 @@ import {
 import { ReactNode } from 'react';
 import { FaBookmark } from "react-icons/fa";
 import { GrInProgress } from "react-icons/gr";
+import { bookList } from "../../constants/bookList"
 
 interface StatsCardProps {
   author: string;
@@ -18,6 +19,7 @@ interface StatsCardProps {
   icon: ReactNode;
 }
 function StatsCard(props: StatsCardProps) {
+  console.log(bookList)
   const { author, title, icon } = props;
   return (
     <Stat
@@ -61,24 +63,17 @@ function FavoriteBooks() {
         Favorite Books
       </chakra.h1>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
-        <StatsCard
-          author={'Robert C. Martin'}
-          title={'The Clean Coder'}
+        {bookList.map((book) => (
+          <StatsCard
+          title={`${book.title}`}
+          author={`${book.author}`}
           icon={<FaBookmark size={'3em'} />}
         />
+        ))}
+        {/* In progress */}
         <StatsCard
-          author={'Jon Yablonski'}
-          title={'Laws of UX'}
-          icon={<FaBookmark size={'3em'} />}
-        />
-        <StatsCard
-          author={'David Farley'}
-          title={'Modern Software Engineering'}
-          icon={<FaBookmark size={'3em'} />}
-        />
-        <StatsCard
-          author={'David Thomas & Andrew Hunt'}
           title={'The Pragmatic Programmer'}
+          author={'David Thomas & Andrew Hunt'}
           icon={<GrInProgress size={'3em'} />}
         />
       </SimpleGrid>

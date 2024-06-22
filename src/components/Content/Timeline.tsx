@@ -13,33 +13,40 @@ import {
 const milestones = [  
   {
     id: 1,
+    date: 'JUNE 10, 2024',
+    title: 'Full Stack Developer',
+    description:
+      'I am currently a Full Stack Engineer at Ecomtent where I design and develop scalable AI-powered web applications. I am excited to be on this journey!'
+  },
+  {
+    id: 2,
     date: 'APRIL 26, 2024',
     title: 'Web Development Diploma',
     description:
       'This is one of my proudest achievements. Within 8 intense months, I had made incredible progress in my understanding of the important tools, frameworks, and concepts in Web Development. I graduated with the ability to create web applications, and the skills to continue learning independently.'
   },
   {
-    id: 2,
+    id: 3,
     date: 'JULY, 2023',
     title: 'Pursuing Web Development',
     description:
       'I took a leap and enrolled myself in Lighthouse Labs Full-Stack Web Development program. On top of my 40-hour work week, I carved out 30+ hours each week to pursued this interest which had always been in the back of my mind.'
   },
   {
-    id: 3,
+    id: 4,
     date: 'SEPTEMBER, 2020',
     title: 'Transportation Analyst',
     description:
       'I have been working as a Transportation Analyst at BusPlanner Inc. since September 2020.'
   },
   {
-    id: 4,
+    id: 5,
     date: 'JUNE 4, 2020',
     title: 'University of Toronto, HBSc.',
     description: `I graduated with Honors Bachelors of Science degree from the University of Toronto in 2020, with a major in Geographic Information Systems and minors in Economics and Business.`
   },
   {
-    id: 5,
+    id: 6,
     date: 'MAY 20, 2017',
     title: 'First Commit',
     description: `Ever since I pushed my first commit to GitHub in May of 2017, part of me had always wanted to be able to build visually appealing applications that appear simple, but abstracts the layer of complexity for the end user. `

@@ -11,10 +11,14 @@ export const bookList = [
     title: "Modern Software Engineering",
     author: "David Farley"
   },
-  // {
-  //   title: "The Pragmatic Programmer",
-  //   author: "David Thomas & Andrew Hunt"
-  // },
+  {
+    title: "The Pragmatic Programmer",
+    author: "David Thomas & Andrew Hunt"
+  },
+  {
+    title: "Software Developer Life",
+    author: "David Xiang"
+  },
   // {
   //   title: "",
   //   author: ""

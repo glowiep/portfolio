@@ -11,13 +11,13 @@ import {
   Link,
 } from "@chakra-ui/react";
 
-import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { MotionBox, MotionButton } from "../../../Motion";
 import { FaGithub } from "react-icons/fa";
 import { MdOpenInNew } from "react-icons/md";
 
 import { handleGAClick } from "../../../../utils/googleAnalytics";
+import { AnimatedMotionDiv } from "../../../Motion";
 
 function Project({ title, description, imageURL, live, liveURL, githubURL, stack }) {
   const { ref, inView } = useInView({
@@ -53,11 +53,7 @@ function Project({ title, description, imageURL, live, liveURL, githubURL, stack
     <Container maxW="5xl" px={{ base: 6, md: 3 }} py={20}>
       <Stack direction={{ base: "column-reverse", md: "row" }}>
         <Stack direction="column" spacing={6} ref={ref}  >
-          <motion.div
-            initial={{ opacity: 0, y: 20 }} 
-            animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 60 }} 
-            transition={{ duration: 0.5 }}
-          >
+          <AnimatedMotionDiv inView={inView} transitionDelay={0.5}>
             <Heading
               as="h3"            
               fontSize="2.5rem"
@@ -77,7 +73,7 @@ function Project({ title, description, imageURL, live, liveURL, githubURL, stack
             >
               {description}
             </Text>
-          </motion.div>
+          </AnimatedMotionDiv>
           <HStack spacing={3}>
             {live && (
               <Link href={liveURL} isExternal target="_blank" _hover={{ textDecoration: 'none' }} onClick={() => handleGAClick(`${title} Site`, 'Site Links')}>

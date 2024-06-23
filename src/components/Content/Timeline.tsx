@@ -9,7 +9,6 @@ import {
   useColorModeValue,
   useBreakpointValue
 } from '@chakra-ui/react';
-import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { AnimatedMotionDiv } from '../Motion';
 

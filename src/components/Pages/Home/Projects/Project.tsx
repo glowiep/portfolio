@@ -53,7 +53,7 @@ function Project({ title, description, imageURL, live, liveURL, githubURL, stack
     <Container maxW="5xl" px={{ base: 6, md: 3 }} py={20}>
       <Stack direction={{ base: "column-reverse", md: "row" }}>
         <Stack direction="column" spacing={6} ref={ref}  >
-          <AnimatedMotionDiv inView={inView} transitionDelay={0.5}>
+          <AnimatedMotionDiv inView={inView} transitionDuration={0.5}>
             <Heading
               as="h3"            
               fontSize="2.5rem"

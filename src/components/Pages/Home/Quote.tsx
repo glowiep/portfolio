@@ -25,7 +25,7 @@ function Quote() {
       fontSize={headingFontSize}
       textShadow= '2px 2px 4px rgba(0, 0, 0, 0.5)'
     >
-      <AnimatedMotionDiv inView={inView} transitionDelay={0.5}>
+      <AnimatedMotionDiv inView={inView} transitionDuration={0.5}>
         <h1 style={{ fontWeight: "bold" }}>The art of programming is the art of organizing complexity.</h1>
         <h2 style={{ fontWeight: "regular", marginTop: "2em", fontSize: "1.8em"}}>
           -Edsger W. Dijkstra, "Notes On Structured Programming"

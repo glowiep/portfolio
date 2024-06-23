@@ -19,7 +19,6 @@ interface StatsCardProps {
   icon: ReactNode;
 }
 function StatsCard(props: StatsCardProps) {
-  console.log(bookList)
   const { author, title, icon } = props;
   return (
     <Stat

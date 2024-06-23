@@ -21,12 +21,12 @@ export const MotionFlex = motion(
 
 export const MotionButton = motion(Button); 
 
-export const AnimatedMotionDiv = ({ children, inView, transitionDelay }) => {
+export const AnimatedMotionDiv = ({ children, inView, transitionDuration }) => {
   return(
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
-      transition={{ transitionDelay }}
+      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
+      transition={{ duration: transitionDuration }}
     >
       {children}
     </motion.div>

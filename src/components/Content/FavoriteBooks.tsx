@@ -62,18 +62,20 @@ function FavoriteBooks() {
         Favorite Books
       </chakra.h1>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
-        {bookList.map((book) => (
+        {bookList.map((book, index) => (
           <StatsCard
-          title={`${book.title}`}
-          author={`${book.author}`}
-          icon={<FaBookmark size={'3em'} />}
-        />
+            title={`${book.title}`}
+            author={`${book.author}`}
+            icon={<FaBookmark size={'3em'} />}
+            key={index}
+          />
         ))}
         {/* In progress */}
         <StatsCard
           title={'The Pragmatic Programmer'}
-          author={'David Thomas & Andrew Hunt'}
+          author={'David Thomas &\n Andrew Hunt'}
           icon={<GrInProgress size={'3em'} />}
+          key="In Progress"
         />
       </SimpleGrid>
     </Box>

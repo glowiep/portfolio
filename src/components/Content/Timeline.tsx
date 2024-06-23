@@ -7,25 +7,16 @@ import {
   VStack,
   Flex,
   useColorModeValue,
-  useBreakpointValue
+  useBreakpointValue,
 } from '@chakra-ui/react';
 import { useInView } from "react-intersection-observer";
 import { AnimatedMotionDiv } from '../Motion';
 import { timelineList } from '../../constants/milestoneList';
+import FunFact from './FunFact';
 
 const Timeline = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
   const isDesktop = useBreakpointValue({ base: false, md: true });
-  const funFact = {
-    title: 'Fun Fact 🥊',
-    description:
-      `
-      I was a competitive amateur boxer between 2017 and 2023, and closed this chapter with 30 fights under my belt. 
-      I've had an amazing run, from training camps to going up against Olympic hopefuls in the ring. 
-      I am now on Special T Boxing team as an Assistant Coach, and continue to box for fitness.
-      With the same discipline mindset, I continue to put the same amount of energy into mastering my craft as a Full Stack Engineer, as I did training for boxing tournaments in the past.
-      `
-  };
 
   return (
     <Container maxWidth="7xl" p={{ base: 2, sm: 10 }}>
@@ -62,25 +53,9 @@ const Timeline = () => {
           )}
         </Flex>
       ))}
-       <Box pos="relative" p="10px" mt="1em">
-        <Box
-          p="2em"
-          width="100%"
-          height="100%"
-          backgroundSize="cover"
-          backgroundRepeat="no-repeat"
-          backgroundPosition="center center"
-          bg={useColorModeValue('gray.700', 'gray.200')}
-          borderRadius="50px"
-          backgroundImage="none"
-          opacity={1}
-        >
-          <chakra.h1 fontSize="2xl" lineHeight={1.2} fontWeight="bold" w="100%">
-            {funFact.title}
-          </chakra.h1>
-          {funFact.description}
-        </Box>
-      </Box>
+     
+      <FunFact />
+
     </Container>
   );
 };

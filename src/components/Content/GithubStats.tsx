@@ -7,17 +7,17 @@ import { useInView } from "react-intersection-observer";
 
 const GithubStats = function () {
   const initialState = {
-    totalContributions: 1522,
+    totalContributions: 2195,
     firstContribution: "2017-05-20",
     longestStreak: {
-      start: "2024-02-07",
-      end: "2024-02-25",
-      days: 19,
+      start: "2024-04-26",
+      end: "2024-06-01",
+      days: 37,
     },
     currentStreak: {
-      start: "2024-04-26",
-      end: "2024-05-01",
-      days: 6,
+      start: "2024-06-23",
+      end: "2024-06-23",
+      days: 0,
     },
   };
   const [githubStats, setGithubStats] = useState(initialState);

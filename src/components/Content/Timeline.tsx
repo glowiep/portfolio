@@ -9,6 +9,9 @@ import {
   useColorModeValue,
   useBreakpointValue
 } from '@chakra-ui/react';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { AnimatedMotionDiv } from '../Motion';
 
 const milestones = [  
   {
@@ -118,6 +121,12 @@ const Card = ({ id, title, description, date }: CardProps) => {
     borderWidthValue = '15px 15px 15px 0';
   }
 
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Trigger animation only once
+    threshold: 0.5, // Percentage of the element in view to trigger animation
+  });
+
+
   return (
     <HStack
       flex={1}
@@ -139,19 +148,23 @@ const Card = ({ id, title, description, date }: CardProps) => {
         right: rightValue,
         display: 'block'
       }}
+      
     >
-      <Box>
-        <Text fontSize="lg" color={isEvenId ? 'teal.400' : 'blue.400'}>
-          {date}
-        </Text>
+      <AnimatedMotionDiv inView={inView} transitionDuration={0.5}>
+        <Box ref={ref}>
+          <Text fontSize="lg" color={isEvenId ? 'teal.400' : 'blue.400'}>
+            {date}
+          </Text>
 
-        <VStack spacing={2} mb={3} textAlign="left">
-          <chakra.h1 fontSize="2xl" lineHeight={1.2} fontWeight="bold" w="100%">
-            {title}
-          </chakra.h1>
-          <Text fontSize="md">{description}</Text>
-        </VStack>
-      </Box>
+          <VStack spacing={2} mb={3} textAlign="left">
+            <chakra.h1 fontSize="2xl" lineHeight={1.2} fontWeight="bold" w="100%">
+              {title}
+            </chakra.h1>
+            <Text fontSize="md">{description}</Text>
+          </VStack>
+          
+        </Box>
+      </AnimatedMotionDiv>
     </HStack>
   );
 };

@@ -15,7 +15,7 @@ export const timelineList = [
   },
   {
     id: 4,
-    date: 'JULY, 2023',
+    date: 'AUGUST, 2023',
     title: 'Pursuing Web Development',
     description:
       'I took the leap and enrolled myself in Lighthouse Labs Full-Stack Web Development program. On top of my 40-hour work week, I carved out 30+ hours each week to pursue this interest with the goal of making a career transition into software development.'

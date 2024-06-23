@@ -147,10 +147,10 @@ const Card = ({ id, title, description, date }: CardProps) => {
         right: rightValue,
         display: 'block'
       }}
-      
+      ref={ref}
     >
       <AnimatedMotionDiv inView={inView} transitionDuration={0.5}>
-        <Box ref={ref}>
+        <Box>
           <Text fontSize="lg" color={isEvenId ? 'teal.400' : 'blue.400'}>
             {date}
           </Text>

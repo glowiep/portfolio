@@ -16,6 +16,7 @@ import {
 import { useState } from 'react';
 
 import { MotionButton } from "../Motion";
+import "../../styles/components/FunFact.css"
 
 const FunFact = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -73,6 +74,7 @@ const FunFact = () => {
           onClick={onOpen}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+          className="boxing-cursor"
         >
           {buttonText}
         </MotionButton>

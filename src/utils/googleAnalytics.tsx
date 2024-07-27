@@ -16,9 +16,7 @@ export const InitializeGoogleAnalytics = function(pathname, hash) {
     // Extract characters after '#' starting from the right
     hashTitle = hash.substring(hashIndex + 1);
     // console.log("hash title: ", hashTitle); // Outputs "substring"
-  } else {
-    console.log("No '#' found in the text.");
-  }
+  } 
 
   useEffect(() => {    
     ReactGA.initialize(VITE_GA_MEASUREMENT_ID);

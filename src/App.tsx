@@ -33,6 +33,8 @@ const AppRoutes = () => {
  )
 }
 
+console.log('%c Welcome to my portfolio 🐥👋', 'font-weight: bold; font-size: 1.5rem;color: gold;border-radius: 4px; margin: 1rem; padding: 0.15rem; text-shadow: 3px 2px 2px #0a0121; background: gray; border: 5px solid purple');
+
 function App() {  
   return (
     <HashRouter>

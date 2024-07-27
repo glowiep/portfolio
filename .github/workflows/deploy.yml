@@ -16,14 +16,13 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@v3
+        with:
+          node-version: '18.18.0'
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
 
       - name: Build project
-        #Allow repo secrets
-        env:
-          VITE_GA_MEASUREMENT_ID: ${{ secrets.VITE_GA_MEASUREMENT_ID }}
         run: npm run build
 
       - name: Upload production-ready build files
@@ -48,5 +47,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.VITE_GA_MEASUREMENT_ID }}
           publish_dir: ./dist

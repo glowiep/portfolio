@@ -47,7 +47,7 @@ setTimeout(() => {
     'font-weight: bold; font-size: 1rem;color: #ceb73f; margin: 1rem; padding: 0.15rem',
     "color: #ceb73f; font-size: 0.75rem; font-family: Tahoma, 'Trebuchet MS', Helvetica;",
   );
-}, 7000)
+}, 10000)
 
 function App() {  
   return (

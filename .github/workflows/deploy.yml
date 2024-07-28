@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+#Allow repo secrets
+env:
+  VITE_GA_MEASUREMENT_ID: ${{ secrets.VITE_GA_MEASUREMENT_ID }}
+  
 jobs:
   build:
     name: Build
@@ -22,10 +26,6 @@ jobs:
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
 
-      - name: Create .env file
-        run: |
-          echo "VITE_GA_MEASUREMENT_ID=${{ secrets.VITE_GA_MEASUREMENT_ID }}" > .env
-
       - name: Build project
         run: npm run build
 
@@ -39,10 +39,13 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: build  # Ensure deploy runs after build
 
     steps:
-      - name: Download artifact
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Download build files
         uses: actions/download-artifact@v3
         with:
           name: production-files

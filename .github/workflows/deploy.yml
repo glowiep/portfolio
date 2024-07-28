@@ -5,14 +5,15 @@ on:
     branches:
       - main
 
-#Allow repo secrets
-env:
-  VITE_GA_MEASUREMENT_ID: ${{ secrets.VITE_GA_MEASUREMENT_ID }}
   
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    
+    #Allow repo secrets
+    env:
+      VITE_GA_MEASUREMENT_ID: ${{ secrets.VITE_GA_MEASUREMENT_ID }}
 
     steps:
       - name: Checkout repo
@@ -25,6 +26,12 @@ jobs:
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
+
+      - name: Create .env file
+        run: echo "VITE_GA_MEASUREMENT_ID=${{ secrets.VITE_GA_MEASUREMENT_ID }}" > .env
+
+      - name: Print .env file contents
+        run: cat .env
 
       - name: Build project
         run: npm run build

@@ -1,3 +1,7 @@
 .boxing-cursor:hover {
   cursor: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewBox='0 0 100 100' style='fill:black;font-size:24px;'%3E%3Ctext y='50%'%3E🥊%3C/text%3E%3C/svg%3E") auto;
 }
+
+.custom-cursor:hover {
+  cursor: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='rgba(0, 0, 0, 0.5)' /%3E%3C/svg%3E") 12 12, auto;
+}

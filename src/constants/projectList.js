@@ -1,5 +1,14 @@
 export const projectList = [
   {
+    title: "Ready Set Go",
+    description:"This is an interactive 3D animated visualization of the Special T Boxing framework.",
+    imageURL: "https://github.com/glowiep/portfolio/blob/main/public/images/projects/ready-set-go.png?raw=true",
+    githubURL: "https://github.com/glowiep/ready-set-go",
+    live: true,
+    liveURL: "https://glorialim.me/ready-set-go",
+    stack: ["ThreeJS", "React", "TailwindCSS"],
+  },
+  {
     title: "AI Keyword Extractor",
     description:"This single-page application uses Open AI API to extract the best keyword(s) based on the input text provided.",
     imageURL: "https://github.com/glowiep/portfolio/blob/main/public/images/projects/ai-keyword-extractor.png?raw=true",

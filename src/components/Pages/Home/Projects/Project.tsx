@@ -30,9 +30,9 @@ function Project({ title, description, imageURL, live, liveURL, githubURL, stack
     whileHover: { scale: 1.1 },
     variant: "solid",
     borderRadius: "2em",
-    px: { base: "1.5em", md: "2em" },
-    gap: { base: "0.5em", md: "1em" },
-    fontSize: { base: "sm", md: "lg" },
+    px: { base: "1.5em", lg: "2em" },
+    gap: { base: "0.5em", lg: "1em" },
+    fontSize: { base: "sm", lg: "lg" },
   }
   
   const githubButtonStyles = {
@@ -44,32 +44,32 @@ function Project({ title, description, imageURL, live, liveURL, githubURL, stack
     variant: "solid",
     borderRadius: "2em",
     background: "transparent",
-    px: { base: "1em", md: "1.5em" },
-    gap: { base: "0.5em", md: "1em" },
-    fontSize: { base: "sm", md: "lg" },
+    px: { base: "1em", lg: "1.5em" },
+    gap: { base: "0.5em", lg: "1em" },
+    fontSize: { base: "sm", lg: "lg" },
   }
 
   return (
-    <Container maxW="5xl" px={{ base: 6, md: 3 }} py={20}>
-      <Stack direction={{ base: "column-reverse", md: "row" }}>
+    <Container maxW="5xl" px={{ base: 6, lg: 3 }} py={20}>
+      <Stack direction={{ base: "column-reverse", lg: "row" }}>
         <Stack direction="column" spacing={6} ref={ref}  >
           <AnimatedMotionDiv inView={inView} transitionDuration={0.5}>
             <Heading
               as="h3"            
-              fontSize="2.5rem"
+              fontSize={{ base: "2.2rem", lg: "2.5rem" }}
               fontWeight="bold"
               textAlign="left"
-              maxW={{ base: "100%", md: "480px" }}
+              maxW={{ base: "100%", lg: "480px" }}
               marginBottom="0.5em"
             >
               {title}
             </Heading>
             <Text
-              fontSize="1.5rem"
+              fontSize={{ base: "1.2rem", lg: "1.5rem" }}
               textAlign="left"
               lineHeight="1.375"
               fontWeight="300"
-              maxW={{ base: "100%", md: "470px" }}
+              maxW={{ base: "100%", lg: "470px" }}
             >
               {description}
             </Text>
@@ -126,18 +126,20 @@ function Project({ title, description, imageURL, live, liveURL, githubURL, stack
             ))}
           </HStack>
         </Stack>
-        <Box ml={{ base: 0, md: 5 }} width={{ base: "auto", md: "lg" }}>
+        <Box ml={{ base: 0, lg: 5 }} width={{ base: "auto", lg: "lg" }}>
         <MotionBox whileHover={{ scale: 1.2}} rounded="full" shadow="lg">
           <Link href={live ? liveURL : githubURL} isExternal target="_blank" _hover={{ textDecoration: 'none' }} onClick={() => handleGAClick(`${title} Site`, `${live ? "Site Links" : "Project Links"}`)}>
+          <Center>
             <Image
-              w="100%"
-              h="100%"
-              minW={{ base: "auto", md: "30rem" }}
+              w={{ sm: "70%", lg: "100%" }}
+              h={{ sm: "70%", lg: "100%" }}
+              minW={{ base: "auto", lg: "30rem" }}
               objectFit="cover"
               src={imageURL}
               rounded="md"
               fallback={<Skeleton />}
             />
+          </Center>
           </Link>
         </MotionBox>
         </Box>

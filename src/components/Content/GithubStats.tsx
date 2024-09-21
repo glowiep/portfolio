@@ -70,7 +70,7 @@ const GithubStats = function () {
     <Container maxW="7xl" p={{ base: 5, md: 10 }}>
       <Center>
         <Box textAlign="center">
-          <Text fontWeight="extrabold" fontSize="5xl" mb={2}>
+          <Text fontWeight="extrabold" fontSize={{base: "3xl", md: "5xl"}} mb={2}>
             <Box as="span" display="inline-block" position="relative">
               <Link href="https://github.com/glowiep/" isExternal target="_blank" _hover={{ textDecoration: 'none' }}>Github Stats</Link>
               <Box
@@ -83,7 +83,7 @@ const GithubStats = function () {
               />
             </Box>
           </Text>
-          <Text fontSize="3xl" fontStyle="italic">
+          <Text fontSize={{base: "2xl", md: "3xl"}} fontStyle="italic">
             Quality is not an act, it is a habit.
           </Text>
         </Box>

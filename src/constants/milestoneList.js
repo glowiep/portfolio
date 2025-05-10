@@ -1,10 +1,17 @@
 export const timelineList = [  
   {
+    id: 7,
+    date: 'JAN 1, 2025',
+    title: 'Lead Full Stack Enginner',
+    description:
+      'Team lead at Ecomtent, where it has been a thrilling journey with lots of learning and growth.'
+  },
+  {
     id: 6,
     date: 'JUNE 10, 2024',
-    title: 'Full Stack Developer',
+    title: 'Full Stack Engineer',
     description:
-      'I am currently a Full Stack Engineer at Ecomtent where I design and develop scalable AI-powered web applications. I am excited to be on this journey!'
+      'Full Stack Engineer at Ecomtent, a fast-paced startup where I design and develop scalable AI-powered web applications.'
   },
   {
     id: 5,

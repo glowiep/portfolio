@@ -40,10 +40,10 @@ export const timelineList = [
     title: 'University of Toronto, HBSc.',
     description: `I graduated with Honors Bachelors of Science degree from the University of Toronto in 2020, with a major in Geographic Information Systems and minors in Economics and Business.`
   },
-  {
-    id: 1,
-    date: 'MAY 20, 2017',
-    title: 'First Commit',
-    description: `Ever since I pushed my first commit to GitHub in May of 2017, part of me had always wanted to be able to build visually appealing applications that appear simple, but abstracts the layer of complexity for the end user. `
-  },
+  // {
+  //   id: 1,
+  //   date: 'MAY 20, 2017',
+  //   title: 'First Commit',
+  //   description: `Ever since I pushed my first commit to GitHub in May of 2017, part of me had always wanted to be able to build visually appealing applications that appear simple, but abstracts the layer of complexity for the end user. `
+  // },
 ];

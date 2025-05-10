@@ -5,7 +5,7 @@ export const projectList = [
     imageURL: "https://github.com/glowiep/portfolio/blob/main/public/images/projects/ready-set-go.png?raw=true",
     githubURL: "https://github.com/glowiep/ready-set-go",
     live: true,
-    liveURL: "https://glorialim.me/ready-set-go",
+    liveURL: "https://glowiep.github.io/ready-set-go",
     stack: ["ThreeJS", "React", "TailwindCSS"],
   },
   {
@@ -14,7 +14,7 @@ export const projectList = [
     imageURL: "https://github.com/glowiep/portfolio/blob/main/public/images/projects/ai-keyword-extractor.png?raw=true",
     githubURL: "https://github.com/glowiep/ai-keyword-extractor",
     live: true,
-    liveURL: "https://main.d9xvu32d16z2l.amplifyapp.com/",
+    // liveURL: "https://main.d9xvu32d16z2l.amplifyapp.com/",
     stack: ["React", "Typescript", "Chakra UI", "Open AI"],
   },
   {

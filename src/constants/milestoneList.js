@@ -4,7 +4,7 @@ export const timelineList = [
     date: 'JAN 1, 2025',
     title: 'Lead Full Stack Enginner',
     description:
-      'Team lead at Ecomtent, where it has been a thrilling journey with lots of learning and growth.'
+      'Team lead at Ecomtent, where it has been a thrilling journey with lots of learning and growth 🚀'
   },
   {
     id: 6,
